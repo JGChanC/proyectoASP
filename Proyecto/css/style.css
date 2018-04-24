@@ -3,6 +3,12 @@
 	margin: 0px;
 }
 
+body{
+     background-image: url(Imagenes/background_perfil.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
 .contenedor{
 	width: 980px;
 	margin: auto;
