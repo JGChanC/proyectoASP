@@ -1,0 +1,49 @@
+﻿*{
+	padding: 0px;
+	margin: 0px;
+}
+
+.contenedor{
+	width: 980px;
+	margin: auto;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.primera_caja{
+	width: 600px;
+	padding: 10px;
+	box-sizing: border-box;
+	border: #6BA3E1 solid 10px;
+	height: 450px;	
+	float: left;
+}
+
+.imagen{
+	float: left;
+	width: 200px;
+    height: 200px;
+	margin-bottom: 15px;
+}
+
+.info{
+	float: right;
+	width: 360px;
+	box-sizing: border-box;
+	margin-top: 25px;
+}
+
+.actividad{
+	clear: both;
+	margin: 10px;
+}
+
+.segunda_caja{
+	float: right;
+	width: 310px;
+	height: 480px;
+	border: 1px red solid;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
