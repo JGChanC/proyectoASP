@@ -1,3 +1,45 @@
-﻿body {
-    background:000;
-}
+﻿      body{
+	        font-family: helvetica;
+            background: url("../Imagenes/background_login.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment:fixed;
+        }
+       #registrar {
+            width: 50%;
+            display:inline-block;
+            text-align: center;
+            background-color:rgba(255,255,255,.7);
+            margin:auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: 1px black solid;
+        }
+        .txtLog{
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 0px black solid;
+        }
+        #btnIniciarSesion{
+            color:white;
+            background-color: #2F8BA4;
+            padding: 5px 75px;
+            font-size: 18px;
+            font-weight: normal;
+            border-radius: 5px;
+        }
+        #Contenedor2{
+            text-align:left;
+            padding-left: 20px;
+        }
+
+        .letreroLabel {
+            display:block;
+            text-align:left;
+        }
+
+        #lnkbRecuperar{
+            font-size: 10px;
+            text-decoration: none;
+            color: #808080;
+        }
