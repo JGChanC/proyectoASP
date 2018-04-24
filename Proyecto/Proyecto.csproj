@@ -97,7 +97,9 @@
     <Content Include="css\registrar.css" />
     <Content Include="css\style.css" />
     <Content Include="Imagenes\background_login.jpg" />
+    <Content Include="Imagenes\background_perfil.jpg" />
     <Content Include="Imagenes\icono_login.png" />
+    <Content Include="Imagenes\icono_perfil.png" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
