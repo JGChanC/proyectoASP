@@ -14,7 +14,7 @@
                 <div>
                     <div>
                         <label class="letreroLabel" for="TxNombre">Nombre(s)</label>
-                        <asp:TextBox ID="TxNombre" runat="server" CssClass="txtLog" placeholder="Nombre"></asp:TextBox>
+                        <asp:TextBox ID="TxNombre" runat="server" CssClass="txtLog" placeholder="Nombre(s)"></asp:TextBox>
                     </div>
 
                     <div>
