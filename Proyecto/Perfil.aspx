@@ -18,7 +18,7 @@
 
         	<div class="info">
         		<h1>Mi Perfil</h1>
-        		<hr>
+        		<hr />
 	            <h2>Roger Iván Canche Yam</h2>
                 <div class="acomodar">
                     <asp:Label CssClass="caja_seg" ID="lblSeg" runat="server" Text="Label">Seguidores:</asp:Label>
@@ -39,6 +39,14 @@
 
         <div class="segunda_caja">
         	<h2>Otras publicaciones</h2>
+        </div>
+        <br /> 
+        <div class="Mensaje">
+            <asp:Label ID="Label1" runat="server" Text="Label">Enviar un mensaje...</asp:Label>
+            <br /> <br /> 
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <br /> <br /> 
+            <asp:Button ID="Button1" runat="server" Text="Button" />
         </div>
     </div>
     </form>

@@ -23,6 +23,7 @@ body{
 	border: #6BA3E1 solid 10px;
 	height: 450px;	
 	float: left;
+    margin-bottom: 80px;
 }
 
 .imagen{
@@ -58,6 +59,12 @@ body{
     background-color:dimgray;
     color: white;
   
+}
+
+.mensaje{
+    clear: both;
+    width: 980px;
+    padding:10px;
 }
 
 .acomodar{
