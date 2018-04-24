@@ -4,19 +4,20 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>POST | Registrar</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
-        <div>
+        <div class="contenedor">
                 <form id="form1" runat="server">
                 <div>
                     <div>
                         <label for="TxNombre">Nombre(s)</label>
-                        <asp:TextBox ID="TxNombre" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TxNombre" runat="server" placeholder="Nombre"></asp:TextBox>
                     </div>
 
                     <div>
-                        <label for="TxApellido">Nombre(s)</label>
+                        <label for="TxApellido">Apellido(s)</label>
                         <asp:TextBox ID="TxApellido" runat="server"></asp:TextBox>
                     </div>
 

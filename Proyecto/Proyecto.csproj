@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\registrar.css" />
     <Content Include="css\style.css" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
