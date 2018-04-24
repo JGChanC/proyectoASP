@@ -23,6 +23,10 @@
 	        	<h3>ACTIVIDAD RECIENTE</h3>
 	        </div>
         </div>
+
+        <div class="segunda_caja">
+        	<h2>Otras publicaciones</h2>
+        </div>
     </div>
 </body>
 </html>
