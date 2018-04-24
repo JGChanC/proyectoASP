@@ -11,6 +11,11 @@
             width: 980px;
             margin:auto;
 	        font-family: helvetica;
+            background-image: url(Imagenes/background_login.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            padding-top: 50px;
+
         }
         #login {
             margin-top: 10px;
@@ -45,6 +50,21 @@
             text-decoration: none;
             color: #808080;
         }
+        #Contenedor3{
+            width: 30%;
+            margin:auto;
+            border-top: 3px white solid;
+            margin-top:50px;
+            padding-top:15px;
+            text-align: center;
+        }
+        #lblCuenta{
+            color: #808080;
+        }
+        #lnkbRegistrar{
+            font-size 10px;
+            color: #2F8BA4;
+        }
 
     </style>
 </head>
@@ -53,6 +73,7 @@
     <div>
     
         <div id="login" >
+            <img id="imgLogin" alt="" src="/Imagenes/icono_login.png" width="25%" /><br />
             <asp:Label ID="Label1" runat="server" Text="Iniciar Sesion"></asp:Label>
             <br />
             <br />
@@ -75,7 +96,13 @@
             </div>
         </div>
         
-    
+           <div id="Contenedor3">
+
+               <asp:Label ID="lblCuenta" runat="server" Font-Size="Small" Text="¿No tienes cuenta?  "></asp:Label>
+
+               <asp:LinkButton ID="lnkbRegistrar" runat="server" Font-Size="Small">Registrate Aqui</asp:LinkButton>
+
+           </div>
     </div>
     </form>
 </body>
