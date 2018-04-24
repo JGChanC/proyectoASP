@@ -5,18 +5,25 @@
             background-size:cover;
             background-attachment:fixed;
         }
+    
+      .contenedor {
+          padding-top:80px;
+
+    }
        #registrar {
-            width: 50%;
-            display:inline-block;
+            margin-top: 200px;
+            width: 40%;
             text-align: center;
-            background-color:rgba(255,255,255,.7);
             margin:auto;
-            padding-top: 20px;
+            padding-top: 50px;
             padding-bottom: 20px;
             border: 1px black solid;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, .5);
         }
         .txtLog{
             padding: 10px 15px;
+            width:60%;
             border-radius: 5px;
             border: 0px black solid;
         }
@@ -43,3 +50,22 @@
             text-decoration: none;
             color: #808080;
         }
+
+         img#imgLogin {
+            width:120px;
+            margin-left:-4em;
+            margin-top:-7em;
+            position:absolute;
+        }
+
+#contodo >*{
+
+        margin:10px 0;
+
+}
+
+#contodo > label {
+    
+        margin-bottom:20px;
+
+}
