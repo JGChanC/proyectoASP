@@ -42,8 +42,18 @@
 	float: right;
 	width: 310px;
 	height: 480px;
-	border: 1px red solid;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.caja_seg{
+    padding: 5px;
+    border: 1px black solid;
+    background-color:deepskyblue;
+  
+}
+
+.acomodar{
+      margin-top: 20px;
 }
 
