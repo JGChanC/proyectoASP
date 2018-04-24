@@ -13,8 +13,8 @@
         <div class="primera_caja">
         	<div class="imagen">
         		&nbsp;&nbsp;&nbsp;
-        		<asp:Image ID="Image1" runat="server" Height="189px" Width="170px" />
-&nbsp;</div>
+        		<asp:Image src="Imagenes/icono_perfil.png" runat="server" Height="189px" Width="170px" />
+            </div>
 
         	<div class="info">
         		<h1>Mi Perfil</h1>

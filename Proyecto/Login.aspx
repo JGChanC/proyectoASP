@@ -25,7 +25,7 @@
             padding-top: 50px;
             padding-bottom: 20px;
             border: 1px black solid;
-            border-radius: 5px;
+            border-radius: 10px;
             background-color: rgba(255, 255, 255, .5)
         }
         .txtLog{
