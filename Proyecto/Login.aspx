@@ -18,11 +18,11 @@
 
         }
         #login {
-            margin-top: 10px;
+            margin-top: 300px;
             width: 30%;
             text-align: center;
             margin:auto;
-            padding-top: 20px;
+            padding-top: 50px;
             padding-bottom: 20px;
             border: 1px black solid;
             border-radius: 5px;
@@ -62,8 +62,15 @@
             color: #808080;
         }
         #lnkbRegistrar{
-            font-size 10px;
+            font-size:10px;
             color: #2F8BA4;
+        }
+
+        #imgLogin {
+            width:100px;
+            margin-left:-3em;
+            margin-top:-5.7em;
+            position:absolute;
         }
 
     </style>
@@ -73,7 +80,7 @@
     <div>
     
         <div id="login" >
-            <img id="imgLogin" alt="" src="/Imagenes/icono_login.png" width="25%" /><br />
+            <img id="imgLogin" alt="" src="/Imagenes/icono_login.png" /><br />
             <asp:Label ID="Label1" runat="server" Text="Iniciar Sesion"></asp:Label>
             <br />
             <br />
