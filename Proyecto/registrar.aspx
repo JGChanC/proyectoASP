@@ -44,7 +44,7 @@
                         <asp:TextBox ID="TxPassConf" CssClass="txtLog" runat="server"  placeholder="Confirmar contraseña" TextMode="Password"></asp:TextBox>
                     </div>
                    
-                    <asp:CheckBox ID="cbAceptoTermino" runat="server" Text="    Acepto terminos y condiciones." />
+                    <asp:CheckBox ID="cbAceptoTermino" CssClass="lnkbRecuperar"   runat="server" Text="    Acepto terminos y condiciones." />
                     <br />
                     <asp:Button ID="btnIniciarSesion" runat="server" Text="Registrar" />
     
