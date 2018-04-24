@@ -22,6 +22,7 @@
 .imagen{
 	float: left;
 	width: 200px;
+    height: 200px;
 	margin-bottom: 15px;
 }
 
@@ -34,14 +35,15 @@
 
 .actividad{
 	clear: both;
-	width: 300px;
 	margin: 10px;
 }
 
 .segunda_caja{
 	float: right;
-	width: 320px;
+	width: 310px;
+	height: 480px;
 	border: 1px red solid;
-	height: 
+    padding: 10px;
+    box-sizing: border-box;
 }
-}
+

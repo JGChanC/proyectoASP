@@ -11,7 +11,8 @@
     <div class="contenedor">
         <div class="primera_caja">
         	<div class="imagen">
-        		<img src="img/user_13230.png" width="150" alt="">
+        		&nbsp;&nbsp;&nbsp;
+        		<img src="img/user_13230.png" width="150" height="150" alt="">
         	</div>
 
         	<div class="info">
