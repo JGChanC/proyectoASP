@@ -11,6 +11,13 @@
             color:blue;
         }
 
+        .texto{
+            clear:both;
+            float:right;
+            width:750px;
+            margin-top:25px;
+        }
+
         .Titulo{
             padding:10px;
             height:500px;
@@ -49,7 +56,13 @@
                 <asp:Label ID="Label4" runat="server" Text="-Ayer"></asp:Label>
                   
             </div>
-        &nbsp;</div>
+
+            <div class="texto">
+                <asp:Label ID="Label1" runat="server" Text="Label">Aprender a usar este sistemas es muy faicl. Lo primero que tenemos que hacer es...</asp:Label>
+            </div>
+        </div>
+
+        
     </div>
     </form>
 </body>
