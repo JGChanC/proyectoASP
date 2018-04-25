@@ -16,6 +16,7 @@
         .imagen_mini{
             padding:10px;
             float:left;
+            margin-left:20px;
         }
 
         .autor{
@@ -30,6 +31,7 @@
     <div class="contenedor">
         <div class="Titulo">
             <div class"imagen_mini>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Image ID="Image1" runat="server" src="Imagenes/icono_perfil.png" Height="80px" Width="89px"/>
             </div>
             
