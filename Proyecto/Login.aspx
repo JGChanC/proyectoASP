@@ -50,6 +50,9 @@
         #lnkbRecuperar{
             font-size: 10px;
             text-decoration: none;
+              display:inline-block;
+            vertical-align:middle;
+            margin-left:150px;
             color: #808080;
         }
         #Contenedor3{
@@ -62,6 +65,10 @@
         }
         #lblCuenta{
             color: #808080;
+        }
+        #chbxRecuerdame {
+            display:inline-block;
+            vertical-align:middle;
         }
         #lnkbRegistrar{
             font-size:10px;
@@ -102,7 +109,7 @@
 
             <asp:CheckBox ID="chbxRecuerdame" runat="server" Text="Recuerdame" Font-Size="X-Small" ForeColor="Gray" />
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               
                 <asp:LinkButton ID="lnkbRecuperar" runat="server">¿Olvidaste tu contraseña?</asp:LinkButton>
 
             </div>
