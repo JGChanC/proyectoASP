@@ -12,7 +12,6 @@
         }
 
         .Titulo{
-            border:1px red solid;
             padding:10px;
             height:500px;
             box-sizing:border-box;
@@ -26,7 +25,7 @@
         .autor{
             float:right;
             margin-top:-90px;
-            margin-right:150px;
+            margin-right:300px;
         }
     </style>
 </head>
