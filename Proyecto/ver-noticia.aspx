@@ -8,12 +8,14 @@
     <link href="css/style.css" rel="stylesheet" /> 
     <style>
         hr{
-            width:500px;
-            background-color:black;
+            width:700px;
+            background-color:darkslategray;
         }
 
         h1{
             color:blue;
+            font-family:'Comic Sans MS';
+            
         }
 
         .texto{
@@ -37,7 +39,6 @@
         .autor{
             float:right;
             margin-top:-90px;
-            margin-right:200px;
         }
     </style>
 </head>
@@ -63,7 +64,7 @@
             </div>
 
             <div class="texto">
-                <asp:Label ID="Label1" runat="server" Text="Label">Aprender a usar este sistemas es muy faicl. Lo primero que tenemos que hacer es...</asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Aprender a usar este sistemas es muy faicl. Lo primero que tenemos que hacer es..." Font-Size="18pt" Font-Strikeout="False"></asp:Label>
             </div>
         </div>
 
