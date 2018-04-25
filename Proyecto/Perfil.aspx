@@ -41,6 +41,7 @@
                     &nbsp
                     <asp:Label ID="Label3" runat="server" Text="2017"></asp:Label>
                 </div>
+                <br /> <br />
 	        	<h3>ACTIVIDAD RECIENTE</h3>
                 <br /> <br />
                 <a href="#">"Como usar Visual Basic"</a>
