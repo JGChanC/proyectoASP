@@ -20,7 +20,7 @@
 
         .autor{
             float:right;
-            margin-top:-100px;
+            margin-top:-70px;
             margin-right:270px;
         }
     </style>
@@ -30,7 +30,7 @@
     <div class="contenedor">
         <div class="Titulo">
             <div class"imagen_mini>
-                <asp:Image ID="Image1" runat="server" src="Imagenes/icono_perfil.png" Height="100px" Width="104px"/>
+                <asp:Image ID="Image1" runat="server" src="Imagenes/icono_perfil.png" Height="80px" Width="89px"/>
             </div>
             
             <div class="autor">
