@@ -6,8 +6,31 @@
 <head runat="server">
     <title>POST | Registrar</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+     <link rel="stylesheet" type="text/css" href="css/header_principal.css"/>
     <link rel="stylesheet" type="text/css" href="css/registrar.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/header_principal.css"/>
+   <style>
+        #registrar {
+            border: 1px #000 solid;
+              border-radius: 10px;
+        }
+
+         .txtLog{
+            border: 1px black solid;
+        }
+
+           img#imgLogin {
+            width:100px;
+            margin-left:-3.5em;
+            margin-top:-6em;
+           }
+
+     .contenedor {
+          padding-top:60px;
+          border:0;
+
+    }
+
+   </style>
 </head>
 <body>
     <!--#include file="headers/header_login.aspx"-->

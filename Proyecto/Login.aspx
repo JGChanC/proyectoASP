@@ -21,7 +21,7 @@
         }
         #login {
             margin-top: 300px;
-            width: 30%;
+            width: 40%;
             text-align: center;
             margin:auto;
             padding-top: 50px;
@@ -102,7 +102,7 @@
 
             <asp:CheckBox ID="chbxRecuerdame" runat="server" Text="Recuerdame" Font-Size="X-Small" ForeColor="Gray" />
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:LinkButton ID="lnkbRecuperar" runat="server">¿Olvidaste tu contraseña?</asp:LinkButton>
 
             </div>
