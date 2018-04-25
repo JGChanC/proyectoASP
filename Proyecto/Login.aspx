@@ -7,13 +7,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style>
-        body{
-            width: 980px;
-            margin:auto;
-	        font-family: helvetica;
+        body {
+             font-family: helvetica;
             background-image: url(Imagenes/background_login.jpg);
             background-repeat: no-repeat;
             background-size:cover;
+        }
+        .contenedor{
+            width: 980px;
+            margin:auto;
             padding-top: 50px;
 
         }
@@ -74,10 +76,13 @@
         }
 
     </style>
+    <link rel="stylesheet" type="text/css" href="../css/header_principal.css"/>
 </head>
+     
 <body>
+    <!--#include file="headers/header_login.aspx"-->
     <form id="form1" runat="server">
-    <div>
+    <div class="contenedor">
     
         <div id="login" >
             <img id="imgLogin" alt="" src="/Imagenes/icono_login.png" /><br />
