@@ -101,6 +101,7 @@
     <Content Include="Imagenes\background_perfil.jpg" />
     <Content Include="Imagenes\icono_login.png" />
     <Content Include="Imagenes\icono_perfil.png" />
+    <Content Include="ListaPost.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -128,6 +129,13 @@
     </Compile>
     <Compile Include="crear-post.aspx.designer.cs">
       <DependentUpon>crear-post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPost.aspx.cs">
+      <DependentUpon>ListaPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaPost.aspx.designer.cs">
+      <DependentUpon>ListaPost.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
