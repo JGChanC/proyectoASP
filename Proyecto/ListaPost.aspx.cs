@@ -13,5 +13,20 @@ namespace Proyecto
         {
 
         }
+
+        protected void lnkbProgramacionWeb_Click(object sender, EventArgs e)
+        {
+
+        }
+        protected void btnCerrar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void lnkbCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Session.Abandon();
+            this.Response.Redirect("Login.aspx");
+        }
     }
 }

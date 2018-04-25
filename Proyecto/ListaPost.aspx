@@ -6,6 +6,14 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <script>
+        function cerrar() {
+            var obj = document.getElementById("lnkbCerrarSesion");
+            if (obj) {
+                obj.click();
+            }
+        }
+    </script>
     <style>
          body{
             margin:auto;
@@ -83,22 +91,19 @@
             padding-top:5px;
             padding-bottom:5px;
         }
-        #form1{
-            margin-top:50px;
-        }
 
     </style>
      <link rel="stylesheet" type="text/css" href="../css/header_sesion.css"/>
 </head>
 <body>
+     <form id="form1" runat="server">
      <!--#include file="headers/header_sesion.aspx"-->
-    <form id="form1" runat="server">
     <div id="contenedor">
         
         <asp:Label ID="lblTituloPost" runat="server" Text="Todos los Post"></asp:Label>
         <div class="lista_post">
             <div class="izquierda">
-                 <asp:LinkButton CssClass="links_post" ID="lnkbProgramacionWeb" runat="server">Programacion Web</asp:LinkButton>
+                 <asp:LinkButton CssClass="links_post" ID="lnkbProgramacionWeb" runat="server" OnClick="lnkbProgramacionWeb_Click">Programacion Web</asp:LinkButton>
             
                 <br />
                 <asp:Label ID="lblPost1" runat="server">Desarrollo web es un término que define la creación de sitios web para Internet o una intranet. 
@@ -202,6 +207,8 @@
             </div>
         </div>
     </div>
-    </form>
+
+         <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click"></asp:LinkButton>
+     </form>
 </body>
 </html>
