@@ -21,8 +21,8 @@
 
         .autor{
             float:right;
-            margin-top:-70px;
-            margin-right:270px;
+            margin-top:-90px;
+            margin-right:150px;
         }
     </style>
 </head>
@@ -36,12 +36,12 @@
             </div>
             
             <div class="autor">
-                <asp:Label ID="Label1" runat="server" Text="Como Usar Visual Basic"></asp:Label>
+                <h1>"Como Usar Visual Basic"</h1>
                 <hr />
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Por"></asp:Label>    
             &nbsp;&nbsp;
-                <asp:Label ID="Label3" runat="server" Text="Roger Canche"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="Roger Canche" Font-Bold="True"></asp:Label>
                  &nbsp;&nbsp;
                 <asp:Label ID="Label4" runat="server" Text="-Ayer"></asp:Label>
                   
