@@ -7,6 +7,10 @@
     <title></title>
     <link href="css/style.css" rel="stylesheet" /> 
     <style>
+        h1{
+            color:blue;
+        }
+
         .Titulo{
             border:1px red solid;
             padding:10px;
