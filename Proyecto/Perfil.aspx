@@ -43,7 +43,7 @@
                 </div>
 	        	<h3>ACTIVIDAD RECIENTE</h3>
                 <br /> <br />
-                <asp:Label ID="Label4" runat="server" Text="Como usar Visual Basic"></asp:Label>
+                <a href="#">"Como usar Visual Basic"</a>
                 &nbsp  &nbsp  &nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label5" runat="server" Text="hace 1 dia"></asp:Label>
 	        </div>
