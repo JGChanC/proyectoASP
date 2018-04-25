@@ -170,6 +170,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="headers\" />
     <Folder Include="plugins\trumbowyg\" />
   </ItemGroup>
   <PropertyGroup>
