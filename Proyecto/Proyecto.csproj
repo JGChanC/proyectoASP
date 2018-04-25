@@ -98,6 +98,7 @@
     <Content Include="css\crearpost.css" />
     <Content Include="css\registrar.css" />
     <Content Include="css\style.css" />
+    <Content Include="headers\WebForm1.aspx" />
     <Content Include="Imagenes\background_login.jpg" />
     <Content Include="Imagenes\background_perfil.jpg" />
     <Content Include="Imagenes\icono_login.png" />
@@ -131,6 +132,13 @@
     </Compile>
     <Compile Include="crear-post.aspx.designer.cs">
       <DependentUpon>crear-post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="headers\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="headers\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListaPost.aspx.cs">
       <DependentUpon>ListaPost.aspx</DependentUpon>
@@ -170,7 +178,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="headers\" />
     <Folder Include="plugins\trumbowyg\" />
   </ItemGroup>
   <PropertyGroup>
