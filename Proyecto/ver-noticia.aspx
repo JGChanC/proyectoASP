@@ -7,6 +7,10 @@
     <title></title>
     <link href="css/style.css" rel="stylesheet" /> 
     <style>
+        h1{
+            color:blue;
+        }
+
         .Titulo{
             border:1px red solid;
             padding:10px;
@@ -16,12 +20,13 @@
         .imagen_mini{
             padding:10px;
             float:left;
+            margin-left:20px;
         }
 
         .autor{
             float:right;
-            margin-top:-70px;
-            margin-right:270px;
+            margin-top:-90px;
+            margin-right:150px;
         }
     </style>
 </head>
@@ -30,16 +35,17 @@
     <div class="contenedor">
         <div class="Titulo">
             <div class"imagen_mini>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Image ID="Image1" runat="server" src="Imagenes/icono_perfil.png" Height="80px" Width="89px"/>
             </div>
             
             <div class="autor">
-                <asp:Label ID="Label1" runat="server" Text="Como Usar Visual Basic"></asp:Label>
+                <h1>"Como Usar Visual Basic"</h1>
                 <hr />
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Por"></asp:Label>    
             &nbsp;&nbsp;
-                <asp:Label ID="Label3" runat="server" Text="Roger Canche"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="Roger Canche" Font-Bold="True"></asp:Label>
                  &nbsp;&nbsp;
                 <asp:Label ID="Label4" runat="server" Text="-Ayer"></asp:Label>
                   
