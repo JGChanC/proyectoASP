@@ -8,7 +8,7 @@
     <title></title>
     <style>
         body {
-             font-family: helvetica;
+            font-family: helvetica;
             background-image: url(Imagenes/background_login.jpg);
             background-repeat: no-repeat;
             background-size:cover;
@@ -102,7 +102,7 @@
             <asp:TextBox ID="txtPassword" CssClass="txtLog" runat="server" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar"  />
+            <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar" OnClick="btnIniciarSesion_Click"  />
             <br />
             <br />
             <div id="Contenedor2">

@@ -83,11 +83,15 @@
             padding-top:5px;
             padding-bottom:5px;
         }
+        #form1{
+            margin-top:50px;
+        }
 
     </style>
+     <link rel="stylesheet" type="text/css" href="../css/header_sesion.css"/>
 </head>
 <body>
-     
+     <!--#include file="headers/header_sesion.aspx"-->
     <form id="form1" runat="server">
     <div id="contenedor">
         

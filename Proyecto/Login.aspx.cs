@@ -11,7 +11,43 @@ namespace Proyecto
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+            Page.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+            HttpCookie ck,ck2;
+            if (this.Session["VSUsuario"] != null)//SI TIENE SESION INCIADA TE MANDA A LISTA POST
+            {
+                this.Response.Redirect("ListaPost.aspx");
+            }
+            ck = this.Request.Cookies["User"];
+            if (ck != null)
+            {
+                txtUsuario.Text = ck.Value;
+            }
+            ck2 = this.Request.Cookies["Pass"];
+            if (ck2 != null)
+            {
+                txtPassword.Text = ck2.Value;
+            }
+        }
 
-		}
-	}
+        protected void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            this.Session["VSUsuario"] = txtUsuario.Text;
+            this.Session["VSPass"] = txtPassword.Text;
+            /* string script = "alert(\""+ this.Session["VSUsuario"]+" "+ this.Session["VSPass"]+"\");";
+             ScriptManager.RegisterStartupScript(this, GetType(),
+                                   "ServerControlScript", script, true);*/
+            if (chbxRecuerdame.Checked)
+            {
+                HttpCookie ckUser = new HttpCookie("User", ""+this.Session["VSUsuario"]);
+                ckUser.Expires = DateTime.Now.AddMinutes(2);
+                this.Response.Cookies.Add(ckUser);
+                HttpCookie ckPass = new HttpCookie("Pass", "" + this.Session["VSPass"]);
+                ckPass.Expires = DateTime.Now.AddMinutes(2);
+                this.Response.Cookies.Add(ckPass);
+
+            }
+            this.Response.Redirect("ListaPost.aspx");
+
+        }
+    }
 }

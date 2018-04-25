@@ -97,9 +97,11 @@
     <Content Include="crear-post.aspx" />
     <Content Include="css\crearpost.css" />
     <Content Include="css\header_principal.css" />
+    <Content Include="css\header_sesion.css" />
     <Content Include="css\registrar.css" />
     <Content Include="css\style.css" />
     <Content Include="headers\header_login.aspx" />
+    <Content Include="headers\header_sesion.aspx" />
     <Content Include="Imagenes\background_login.jpg" />
     <Content Include="Imagenes\background_perfil.jpg" />
     <Content Include="Imagenes\icono_login.png" />
@@ -141,6 +143,13 @@
     </Compile>
     <Compile Include="headers\header_login.aspx.designer.cs">
       <DependentUpon>header_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="headers\header_sesion.aspx.cs">
+      <DependentUpon>header_sesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="headers\header_sesion.aspx.designer.cs">
+      <DependentUpon>header_sesion.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListaPost.aspx.cs">
       <DependentUpon>ListaPost.aspx</DependentUpon>
