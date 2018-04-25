@@ -7,15 +7,16 @@
     <title>POST | publicar </title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" href="plugins/trumbowyg/ui/trumbowyg.css">
+    <link rel="stylesheet" type="text/css" href="css/crearpost.css"/>
     
 </head>
 <body>
     <div class="contenedor">
-    <form id="form1" runat="server">
         <div class="contenido-post">
+                <h1>Crear noticia</h1>
+              <form id="form1" runat="server">
             <div>
-                <asp:Label ID="Label1" runat="server" Text="Nombre de la noticia:"></asp:Label>
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtNombreNoticia" placeholder="Nombre de la noticia" runat="server"></asp:TextBox>
             </div>
 
             <div>
@@ -24,9 +25,9 @@
 
             </div>
             <div>
-                <asp:CheckBox Text="Hacer visible la noticia" runat="server" />
+                <asp:CheckBox  CssClass="theme-check" Text=" Hacer visible la noticia" runat="server" />
             </div>
-            <asp:Button Text="Guardar" runat="server" />
+            <asp:Button ID="btnEnviar" Text="Guardar" runat="server" />
         </div>
     </form>
     </div>

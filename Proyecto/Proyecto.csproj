@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="crear-post.aspx" />
+    <Content Include="css\crearpost.css" />
     <Content Include="css\registrar.css" />
     <Content Include="css\style.css" />
     <Content Include="Imagenes\background_login.jpg" />
