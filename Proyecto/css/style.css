@@ -9,18 +9,22 @@ body{
     background-size: cover;
 }
 
+.actividad a{
+  text-decoration:none;  
+}
+
 .contenedor{
 	width: 980px;
 	margin: auto;
 	padding: 10px;
-	box-sizing: border-box;
+	box-sizing: border-box;    
+	border: #6BA3E1 solid 10px;
 }
 
 .primera_caja{
 	width: 600px;
 	padding: 10px;
 	box-sizing: border-box;
-	border: #6BA3E1 solid 10px;
 	height: 450px;	
 	float: left;
     margin-bottom: 30px;
@@ -40,6 +44,15 @@ body{
 	margin-top: 25px;
 }
 
+.info h1{
+    color:blue;
+}
+
+.arreglos{
+    background-color:cornflowerblue;
+    padding: 5px 0px;
+}
+
 .actividad{
 	clear: both;
 	margin: 10px;
@@ -52,6 +65,10 @@ body{
     padding: 10px;
     margin-bottom:20px;
     box-sizing: border-box;
+}
+
+.segunda_caja h2{
+    color:blue;
 }
 
 .caja_seg{
@@ -70,5 +87,19 @@ body{
 
 .acomodar{
       margin-top: 20px;
+}
+
+.cajita{
+    border:1px rede solid;
+    border-radius:10px;
+}
+
+.botonEnviar{
+    color:white;
+    background-color: #2F8BA4;
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: normal;
+    border-radius: 5px;
 }
 
