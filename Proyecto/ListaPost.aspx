@@ -8,16 +8,16 @@
     <title></title>
     <style>
          body{
-            width: 980px;
             margin:auto;
 	        font-family: helvetica;
             background-image: url(Imagenes/background_perfil.jpg);
             background-repeat: no-repeat;
             background-size:cover;
-            padding-top: 50px;
+            /*padding-top: 50px;*/
 
         }
         #contenedor {
+            width:80%;
             text-align:center;
             margin-top: 300px;
             margin:auto;
@@ -36,7 +36,7 @@
             /*border:1px black solid;*/
             text-align:left;
             clear:both;
-            height:100px;
+            height:110px;
         }
         .lista_post:hover{
             border:1px black solid;
@@ -65,10 +65,29 @@
             padding:0px;
             text-align:center;
         }
+        .like{
+            background-color: black;
+            color:white;
+            border-radius:5px;
+            padding-top:5px;
+            padding-bottom:5px;
+            border-bottom-left-radius:0px;
+            border-bottom-right-radius:0px;
+        }
+        .coment{
+            background-color:#2F8BA4;
+            color:white;
+            border-radius:5px;
+            border-top-left-radius:0px;
+            border-top-right-radius:0px;
+            padding-top:5px;
+            padding-bottom:5px;
+        }
 
     </style>
 </head>
 <body>
+     
     <form id="form1" runat="server">
     <div id="contenedor">
         
@@ -83,10 +102,16 @@
                     de base de datos con el uso de un navegador web a fin de realizar determinadas tareas o mostrar información.</asp:Label>
             </div>
             <div class="derecha">
-                <p style="margin-bottom:5px;">Likes</p>
+                <div class="like">
+                     <p style="margin-bottom:5px;">Likes</p>
                 <p>4</p>
-                <p style="margin-bottom:5px;">Comentarios</p>
-                <p>3</p>
+                </div>
+                <div class="coment">
+                     <p style="margin-bottom:5px;">Comentarios</p>
+                       <p>3</p>
+                </div>
+               
+               
             </div>
                
             
@@ -101,10 +126,15 @@
             </div>
             
             <div class="derecha">
-                <p style="margin-bottom:5px;">Likes</p>
-                <p>7</p>
-                <p style="margin-bottom:5px;">Comentarios</p>
-                <p>7</p>
+                <div class="like">
+                     <p style="margin-bottom:5px;">Likes</p>
+                        <p>7</p>
+                </div>
+                <div class="coment">
+                     <p style="margin-bottom:5px;">Comentarios</p>
+                       <p>7</p>
+                </div>
+
             </div>
         </div>
          <div class="lista_post">
@@ -116,10 +146,14 @@
                     de base de datos con el uso de un navegador web a fin de realizar determinadas tareas o mostrar información.</asp:Label>
              </div>
              <div class="derecha">
-                <p style="margin-bottom:5px;">Likes</p>
-                <p>75</p>
-                <p style="margin-bottom:5px;">Comentarios</p>
-                <p>10</p>
+               <div class="like">
+                     <p style="margin-bottom:5px;">Likes</p>
+                <p>4</p>
+                </div>
+                <div class="coment">
+                     <p style="margin-bottom:5px;">Comentarios</p>
+                       <p>3</p>
+                </div>
             </div>
             
         </div>
@@ -133,10 +167,14 @@
              </div>
             
              <div class="derecha">
-                <p style="margin-bottom:5px;">Likes</p>
-                <p>7</p>
-                <p style="margin-bottom:5px;">Comentarios</p>
-                <p>30</p>
+               <div class="like">
+                     <p style="margin-bottom:5px;">Likes</p>
+                <p>4</p>
+                </div>
+                <div class="coment">
+                     <p style="margin-bottom:5px;">Comentarios</p>
+                       <p>3</p>
+                </div>
             </div>
         </div>
          <div class="lista_post">
@@ -149,10 +187,14 @@
              </div>
            
              <div class="derecha">
-                <p style="margin-bottom:5px;">Likes</p>
+                <div class="like">
+                     <p style="margin-bottom:5px;">Likes</p>
                 <p>1000</p>
-                <p style="margin-bottom:5px;">Comentarios</p>
-                <p>50</p>
+                </div>
+                <div class="coment">
+                     <p style="margin-bottom:5px;">Comentarios</p>
+                       <p>50</p>
+                </div>
             </div>
         </div>
     </div>
