@@ -5,4 +5,4 @@
     </div>
         <asp:Image ImageUrl="../imagenes/logofinta.png" CssClass="imgLogo" runat="server" />
 
-    </form>
+    </div>
