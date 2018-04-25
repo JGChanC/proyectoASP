@@ -14,6 +14,9 @@
         	<div class="imagen">
         		&nbsp;&nbsp;&nbsp;
         		<asp:Image src="Imagenes/icono_perfil.png" runat="server" Height="189px" Width="170px" />
+                <br />
+                <br />
+                <br />
             </div>
 
         	<div class="info">
@@ -33,20 +36,29 @@
         	</div>
 	        
 	        <div class="actividad">
+                <div class"box_info">
+                    <asp:Label ID="Label2" runat="server" Text="Usuario desde:"></asp:Label>
+                    &nbsp
+                    <asp:Label ID="Label3" runat="server" Text="2017"></asp:Label>
+                </div>
 	        	<h3>ACTIVIDAD RECIENTE</h3>
+                <br /> <br />
+                <asp:Label ID="Label4" runat="server" Text="Como usar Visual Basic"></asp:Label>
+                &nbsp  &nbsp  &nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label5" runat="server" Text="hace 1 dia"></asp:Label>
 	        </div>
         </div>
 
         <div class="segunda_caja">
         	<h2>Otras publicaciones</h2>
         </div>
-        <br /> 
-        <div class="Mensaje">
+        <br /> <br />
+        <div class="mensaje">
             <asp:Label ID="Label1" runat="server" Text="Label">Enviar un mensaje...</asp:Label>
             <br /> <br /> 
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" Width="448px" Height="122px"></asp:TextBox>
             <br /> <br /> 
-            <asp:Button ID="Button1" runat="server" Text="Button" />
+            <asp:Button ID="btnEnviar" runat="server" Text="Enviar" />
         </div>
     </div>
     </form>
