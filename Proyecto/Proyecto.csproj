@@ -102,6 +102,7 @@
     <Content Include="Imagenes\background_perfil.jpg" />
     <Content Include="Imagenes\icono_login.png" />
     <Content Include="Imagenes\icono_perfil.png" />
+    <Content Include="ListaPost.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -120,6 +121,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\jquery-3.2.1.js" />
+    <Content Include="ver-noticia.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +131,13 @@
     </Compile>
     <Compile Include="crear-post.aspx.designer.cs">
       <DependentUpon>crear-post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPost.aspx.cs">
+      <DependentUpon>ListaPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaPost.aspx.designer.cs">
+      <DependentUpon>ListaPost.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -151,6 +160,13 @@
     </Compile>
     <Compile Include="registrar.aspx.designer.cs">
       <DependentUpon>registrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ver-noticia.aspx.cs">
+      <DependentUpon>ver-noticia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ver-noticia.aspx.designer.cs">
+      <DependentUpon>ver-noticia.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -13,16 +13,19 @@
         <div class="primera_caja">
         	<div class="imagen">
         		&nbsp;&nbsp;&nbsp;
-        		<asp:Image src="Imagenes/icono_perfil.png" runat="server" Height="189px" Width="170px" />
+        		<asp:Image src="Imagenes/icono_perfil.png" runat="server" Height="189px" Width="170px" BorderStyle="Dotted" />
                 <br />
                 <br />
                 <br />
             </div>
 
         	<div class="info">
-        		<h1>Mi Perfil</h1>
-        		<hr />
+        		<h1 aria-busy="False">Mi Perfil</h1>
+                <br /> 
+        		<hr class="arregloss" />
+                <br /> 
 	            <h2>Roger Iván Canche Yam</h2>
+                <br />
                 <div class="acomodar">
                     <asp:Label CssClass="caja_seg" ID="lblSeg" runat="server" Text="Label">Seguidores:</asp:Label>
                 &nbsp;&nbsp
@@ -44,8 +47,7 @@
                 <br /> <br />
 	        	<h3>ACTIVIDAD RECIENTE</h3>
                 <br /> <br />
-                <a href="#">"Como usar Visual Basic"</a>
-                &nbsp  &nbsp  &nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">"Como usar Visual Basic"</a> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label5" runat="server" Text="hace 1 dia"></asp:Label>
 	        </div>
         </div>
@@ -55,11 +57,11 @@
         </div>
         <br /> <br />
         <div class="mensaje">
-            <asp:Label ID="Label1" runat="server" Text="Label">Enviar un mensaje...</asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Enviar un mensaje..." ForeColor="#3333CC"></asp:Label>
             <br /> <br /> 
-            <asp:TextBox ID="TextBox1" runat="server" Width="448px" Height="122px"></asp:TextBox>
+            <asp:TextBox CssClass="cajita" ID="txtmensaje" runat="server" Width="448px" Height="83px" BorderWidth="1px"></asp:TextBox>
             <br /> <br /> 
-            <asp:Button ID="btnEnviar" runat="server" Text="Enviar" />
+            <asp:Button CssClass="botonEnviar" ID="btnEnviar" runat="server" Text="Enviar" BorderStyle="Ridge" />
         </div>
     </div>
     </form>
