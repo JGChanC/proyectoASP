@@ -104,6 +104,7 @@
     <Content Include="Imagenes\background_perfil.jpg" />
     <Content Include="Imagenes\icono_login.png" />
     <Content Include="Imagenes\icono_perfil.png" />
+    <Content Include="Imagenes\logofinta.png" />
     <Content Include="ListaPost.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />

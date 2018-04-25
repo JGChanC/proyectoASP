@@ -7,8 +7,10 @@
     <title>POST | Registrar</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/registrar.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header_principal.css"/>
 </head>
 <body>
+    <!--#include file="headers/header_login.aspx"-->
         <div class="contenedor">
                 <form id="registrar" runat="server">
                      <img id="imgLogin" alt="" src="/Imagenes/icono_login.png" /><br />
