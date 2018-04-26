@@ -11,7 +11,10 @@ namespace Proyecto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (this.Session["VSUsuario"] == null)
+            {
+                this.Response.Redirect("Login.aspx");
+            }
         }
     }
 }

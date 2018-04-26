@@ -31,8 +31,8 @@ namespace Proyecto
 
         protected void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            this.Session["VSUsuario"] = txtUsuario.Text;
-            this.Session["VSPass"] = txtPassword.Text;
+            this.Session["VSUsuario"] = this.ViewState["VEUsuario"];
+            this.Session["VSPass"] = this.ViewState["VEPass"]; 
             /* string script = "alert(\""+ this.Session["VSUsuario"]+" "+ this.Session["VSPass"]+"\");";
              ScriptManager.RegisterStartupScript(this, GetType(),
                                    "ServerControlScript", script, true);*/
@@ -48,6 +48,16 @@ namespace Proyecto
             }
             this.Response.Redirect("ListaPost.aspx");
 
+        }
+
+        protected void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            this.ViewState["VEUsuario"] = txtUsuario.Text;
+        }
+
+        protected void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            this.ViewState["VEPass"] = txtPassword.Text;
         }
     }
 }

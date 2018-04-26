@@ -8,9 +8,11 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" href="plugins/trumbowyg/ui/trumbowyg.css">
     <link rel="stylesheet" type="text/css" href="css/crearpost.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header_sesion.css"/>
     
 </head>
 <body>
+    <!--#include file="headers/header_sesion.aspx"-->
     <div class="contenedor">
         <div class="contenido-post">
                 <h1>Crear noticia</h1>

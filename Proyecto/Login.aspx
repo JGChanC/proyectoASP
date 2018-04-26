@@ -96,10 +96,10 @@
             <asp:Label ID="Label1" runat="server" Text="Iniciar Sesion"></asp:Label>
             <br />
             <br />
-            <asp:TextBox ID="txtUsuario"  CssClass="txtLog" runat="server" placeholder="Usuario" ></asp:TextBox>
+            <asp:TextBox ID="txtUsuario"  CssClass="txtLog" runat="server" placeholder="Usuario" OnTextChanged="txtUsuario_TextChanged" ></asp:TextBox>
             <br />
             <br />
-            <asp:TextBox ID="txtPassword" CssClass="txtLog" runat="server" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" CssClass="txtLog" runat="server" TextMode="Password" placeholder="Contraseña" OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar" OnClick="btnIniciarSesion_Click"  />
