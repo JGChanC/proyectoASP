@@ -37,6 +37,14 @@
        }
 
 
+       $("#btnIniciarSesion").click(function () {
+           console.log();
+           if ($(this).is(':disabled')) {
+               alert("No aceptó términos y condiciones");
+           }
+       });
+
+
        function validaUsuaTamanio(sender, args) {
            if (args.Value.length >= 8 && args.Value.length <= 20) {
 
@@ -47,10 +55,37 @@
            }
        }
 
+    
+       function habilitarButton() {
+
+           if (!$("#cbAceptoTermino").is(':checked')) {
+               $('#btnIniciarSesion').attr('disabled', 'disabled');
+               $('#btnIniciarSesion').removeClass('enabled');
+               $('#btnIniciarSesion').addClass('disabled');
+           } else {
+               $('#btnIniciarSesion').removeAttr('disabled');
+               $('#btnIniciarSesion').removeClass('disabled');
+               $('#btnIniciarSesion').addClass('enabled');
+               
+           }
+
+       }
+       
+
     </script>
 
   
    <style>
+
+       .enabled {
+       
+           cursor:pointer;
+       
+       }
+
+       .disabled {
+            cursor:not-allowed;
+       }
         #registrar {
             border: 1px #000 solid;
               border-radius: 10px;
@@ -119,20 +154,23 @@
                         
                         <asp:TextBox ID="TxPass" runat="server" CssClass="txtLog"  placeholder="Contraseña" TextMode="Password"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RFrequirePass" runat="server" ControlToValidate="TxPass" Display="None" ErrorMessage="No ingresó su contraseña" SetFocusOnError="True"></asp:RequiredFieldValidator>
-                     <asp:CustomValidator ID="CVtamanioContra" runat="server" ControlToValidate="TxPass" Display="None" ErrorMessage="La contraeña debe contener menos de 20 y mas de 8 caracteres" ClientValidationFunction="validaContraTamanio"></asp:CustomValidator>
+                     <asp:CustomValidator ID="CVtamanioContra" runat="server" ControlToValidate="TxPass" Display="None" ErrorMessage="La contraseña debe contener menos de 20 y mas de 8 caracteres" ClientValidationFunction="validaContraTamanio"></asp:CustomValidator>
                      <asp:RegularExpressionValidator ID="REexpresionContra" runat="server" ControlToValidate="TxPass" Display="None" ErrorMessage="la contraseña no cumple con formato válido" SetFocusOnError="True" ValidationExpression="[0-9A-Za-z]+"></asp:RegularExpressionValidator>
                     </div>
 
                     <div>
                        
                         <asp:TextBox ID="TxPassConf" CssClass="txtLog" runat="server"  placeholder="Confirmar contraseña" TextMode="Password"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RFrequireComPass" runat="server" ControlToValidate="TxPassConf" Display="None" ErrorMessage="No ingresó comparar contraseña" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                     <asp:CustomValidator ID="CVtamanioComPass" runat="server" ControlToValidate="TxPassConf" Display="None" ErrorMessage="Su contraseña repetida debe contener menos de 20 y mas de 8 caracteres" ClientValidationFunction="validaContraTamanio"></asp:CustomValidator>
+                        <asp:CompareValidator ID="CVConfPass" runat="server" ControlToCompare="TxPass" ControlToValidate="TxPassConf" Display="None" ErrorMessage="La confirmación de contraseña es incorrecta"></asp:CompareValidator>
                     </div>
                    
                     <asp:ValidationSummary ID="VRresumenRegistrar" runat="server" DisplayMode="List" ShowMessageBox="True" ShowSummary="False" />
                    
-                    <asp:CheckBox ID="cbAceptoTermino" CssClass="lnkbRecuperar"   runat="server" Text="    Acepto terminos y condiciones." />
+                    <asp:CheckBox ID="cbAceptoTermino" CssClass="lnkbRecuperar"   runat="server"  onClick="habilitarButton()"  Text ="    Acepto terminos y condiciones." />
                     <br />
-                    <asp:Button ID="btnIniciarSesion" runat="server" Text="Registrar" />
+                    <asp:Button ID="btnIniciarSesion" runat="server"  CssClass="disabled" disabled="disabled" Text="Registrar" />
     
                 </div>
                 </form>

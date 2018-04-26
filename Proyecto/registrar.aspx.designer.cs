@@ -211,6 +211,33 @@ namespace Proyecto {
         protected global::System.Web.UI.WebControls.TextBox TxPassConf;
         
         /// <summary>
+        /// RFrequireComPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFrequireComPass;
+        
+        /// <summary>
+        /// CVtamanioComPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CVtamanioComPass;
+        
+        /// <summary>
+        /// CVConfPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CVConfPass;
+        
+        /// <summary>
         /// VRresumenRegistrar control.
         /// </summary>
         /// <remarks>

@@ -35,5 +35,7 @@ namespace Proyecto
             this.Session["VSTitulo"] = this.ViewState["VENombreNoticia"];
             this.Response.Redirect("ver-noticia.aspx");
         }
+
+
     }
 }
