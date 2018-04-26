@@ -12,9 +12,10 @@
             background-color:darkslategray;
         }
 
-        h1{
+        #lblTitulo{
             color:blue;
             font-family:'Comic Sans MS';
+            font-size:30px;
             
         }
 
@@ -62,7 +63,7 @@
             </div>
             
             <div class="autor">
-                <h1>Como Usar Visual Basic</h1>
+                <asp:Label ID="lblTitulo" runat="server" Text="Como Usar Visual Basic"></asp:Label>
                 <hr />
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Por"></asp:Label>    
@@ -74,7 +75,7 @@
             </div>
 
             <div class="texto">
-                <asp:Label ID="Label1" runat="server" Text="Aprender a usar este sistemas es muy faicl. Lo primero que tenemos que hacer es..." Font-Size="18pt" Font-Strikeout="False"></asp:Label>
+                <asp:Label ID="lblTexto" runat="server" Text="Aprender a usar este sistemas es muy faicl. Lo primero que tenemos que hacer es..." Font-Size="18pt" Font-Strikeout="False"></asp:Label>
             </div>
         </div>
 

@@ -126,7 +126,7 @@
             
         </div>
         <div class="lista_post">
-            <asp:LinkButton CssClass="links_post" ID="lnkbPoo" runat="server">Programacion Orientada a Objetos</asp:LinkButton>
+            <asp:LinkButton CssClass="links_post" ID="lnkbPoo" runat="server" OnClick="lnkbPoo_Click1">Programacion Orientada a Objetos</asp:LinkButton>
             <br />
             <div class="izquierda">
                <asp:Label ID="lblPost2" runat="server">Desarrollo web es un término que define la creación de sitios web para Internet o una intranet. 
@@ -148,7 +148,7 @@
         </div>
          <div class="lista_post">
              <div class="izquierda">
-                 <asp:LinkButton CssClass="links_post" ID="lnkbJS" runat="server">JavaScript</asp:LinkButton>
+                 <asp:LinkButton CssClass="links_post" ID="lnkbJS" runat="server" OnClick="lnkbJS_Click">JavaScript</asp:LinkButton>
              <br />
              <asp:Label ID="lblPost3" runat="server">Desarrollo web es un término que define la creación de sitios web para Internet o una intranet. 
                     Para conseguirlo se hace uso de tecnologías de software del lado del servidor y del cliente que involucran una combinación de procesos 
@@ -168,7 +168,7 @@
         </div>
          <div class="lista_post">
              <div class="izquierda">
-                 <asp:LinkButton CssClass="links_post" ID="lnkbJQ" runat="server">JQuery</asp:LinkButton><br/>
+                 <asp:LinkButton CssClass="links_post" ID="lnkbJQ" runat="server" OnClick="lnkbJQ_Click">JQuery</asp:LinkButton><br/>
              <asp:Label ID="lblPost4" runat="server"> jQuery es una biblioteca multiplataforma de JavaScript, creada inicialmente por John Resig, 
                  que permite simplificar la manera de interactuar con los documentos HTML, manipular el árbol DOM, manejar eventos, desarrollar 
                  animaciones y agregar interacción con la técnica AJAX a páginas web. Fue presentada el 14 de enero de 2006 en el BarCamp NYC. 
@@ -188,7 +188,7 @@
         </div>
          <div class="lista_post">
              <div class="izquierda">
-                 <asp:LinkButton CssClass="links_post" ID="lnkbASP" runat="server">ASP.NET</asp:LinkButton><br/>
+                 <asp:LinkButton CssClass="links_post" ID="lnkbASP" runat="server" OnClick="lnkbASP_Click">ASP.NET</asp:LinkButton><br/>
              <asp:Label ID="lblPost5" runat="server">ASP.NET es un entorno para aplicaciones web desarrollado y comercializado por Microsoft.
                   Es usado por programadores y diseñadores para construir sitios web dinámicos, aplicaciones web y servicios web XML. 
                  Apareció en enero de 2002 con la versión 1.0 del .NET Framework, y es la tecnología sucesora de la tecnología Active Server 
