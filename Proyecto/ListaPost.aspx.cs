@@ -15,11 +15,14 @@ namespace Proyecto
             {
                 this.Response.Redirect("Login.aspx");
             }
+            
         }
 
         protected void lnkbProgramacionWeb_Click(object sender, EventArgs e)
         {
-
+            this.Session["VSTexto"] = lblPost1.Text;
+            this.Session["VSTitulo"] = lnkbProgramacionWeb.Text;
+            this.Response.Redirect("ver-noticia.aspx");
         }
         protected void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -30,6 +33,35 @@ namespace Proyecto
         {
             this.Session.Abandon();
             this.Response.Redirect("Login.aspx");
+        }
+
+
+        protected void lnkbJQ_Click(object sender, EventArgs e)
+        {
+            this.Session["VSTexto"] = lblPost4.Text;
+            this.Session["VSTitulo"] = lnkbJQ.Text;
+            this.Response.Redirect("ver-noticia.aspx");
+        }
+
+        protected void lnkbJS_Click(object sender, EventArgs e)
+        {
+            this.Session["VSTexto"] = lblPost3.Text;
+            this.Session["VSTitulo"] = lnkbJS.Text;
+            this.Response.Redirect("ver-noticia.aspx");
+        }
+
+        protected void lnkbPoo_Click1(object sender, EventArgs e)
+        {
+            this.Session["VSTexto"] = lblPost2.Text;
+            this.Session["VSTitulo"] = lnkbPoo.Text;
+            this.Response.Redirect("ver-noticia.aspx");
+        }
+
+        protected void lnkbASP_Click(object sender, EventArgs e)
+        {
+            this.Session["VSTexto"] = lblPost5.Text;
+            this.Session["VSTitulo"] = lnkbASP.Text;
+            this.Response.Redirect("ver-noticia.aspx");
         }
     }
 }
