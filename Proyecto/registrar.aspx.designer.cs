@@ -13,6 +13,33 @@ namespace Proyecto {
     public partial class registrar {
         
         /// <summary>
+        /// RFrequireNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFrequireNombre;
+        
+        /// <summary>
+        /// CVtamanioNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CVtamanioNombre;
+        
+        /// <summary>
+        /// REexpresionNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REexpresionNombre;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -40,6 +67,33 @@ namespace Proyecto {
         protected global::System.Web.UI.WebControls.TextBox TxApellido;
         
         /// <summary>
+        /// RFrequireApellido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFrequireApellido;
+        
+        /// <summary>
+        /// CVtamanioApellido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CVtamanioApellido;
+        
+        /// <summary>
+        /// REexpresionApellido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REexpresionApellido;
+        
+        /// <summary>
         /// TxCorreo control.
         /// </summary>
         /// <remarks>
@@ -47,6 +101,33 @@ namespace Proyecto {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxCorreo;
+        
+        /// <summary>
+        /// RFrequireCorreo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFrequireCorreo;
+        
+        /// <summary>
+        /// CVtamanioCorreo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CVtamanioCorreo;
+        
+        /// <summary>
+        /// REexpresionCorreo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REexpresionCorreo;
         
         /// <summary>
         /// TxtNomUsua control.
@@ -58,6 +139,33 @@ namespace Proyecto {
         protected global::System.Web.UI.WebControls.TextBox TxtNomUsua;
         
         /// <summary>
+        /// RFrequireNomUsua control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFrequireNomUsua;
+        
+        /// <summary>
+        /// CVtamanioNomUsua control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CVtamanioNomUsua;
+        
+        /// <summary>
+        /// REexpresionNomUsua control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REexpresionNomUsua;
+        
+        /// <summary>
         /// TxPass control.
         /// </summary>
         /// <remarks>
@@ -67,6 +175,33 @@ namespace Proyecto {
         protected global::System.Web.UI.WebControls.TextBox TxPass;
         
         /// <summary>
+        /// RFrequirePass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFrequirePass;
+        
+        /// <summary>
+        /// CVtamanioContra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CVtamanioContra;
+        
+        /// <summary>
+        /// REexpresionContra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REexpresionContra;
+        
+        /// <summary>
         /// TxPassConf control.
         /// </summary>
         /// <remarks>
@@ -74,6 +209,15 @@ namespace Proyecto {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxPassConf;
+        
+        /// <summary>
+        /// VRresumenRegistrar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary VRresumenRegistrar;
         
         /// <summary>
         /// cbAceptoTermino control.

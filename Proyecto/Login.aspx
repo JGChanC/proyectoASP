@@ -5,7 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <script src="scripts/jquery-3.2.1.js"></script>
+     <appSettings>
+        <add key="ValidationSettings:UnobtrusiveValidationMode" value="None"></add>
+    </appSettings>
+    <title>Login | POST</title>
     <style>
         body {
             font-family: helvetica;
@@ -98,9 +102,15 @@
             <br />
             <asp:TextBox ID="txtUsuario"  CssClass="txtLog" runat="server" placeholder="Usuario" OnTextChanged="txtUsuario_TextChanged" ></asp:TextBox>
             <br />
+            <asp:RequiredFieldValidator ID="RFnombreUsuario" runat="server" ControlToValidate="txtUsuario" Display="None" ErrorMessage="No ingresó su nombre de usuario" SetFocusOnError="True"></asp:RequiredFieldValidator>
+            
+            <asp:RegularExpressionValidator ID="REexpresionUsuario" runat="server" ControlToValidate="txtUsuario" Display="None" ErrorMessage="El nombre de usuario minimo debe contener 8 caracteres" SetFocusOnError="True" ValidationExpression="[0-9|a-z|A-Z]{8,36}"></asp:RegularExpressionValidator>
+            
             <br />
             <asp:TextBox ID="txtPassword" CssClass="txtLog" runat="server" TextMode="Password" placeholder="Contraseña" OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
             <br />
+            <asp:RequiredFieldValidator ID="RFcontrasenia" runat="server" ControlToValidate="txtPassword" Display="None" ErrorMessage="No ingresó la contraseña" SetFocusOnError="True"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="REContrasenia" runat="server" ControlToValidate="txtPassword" Display="None" ErrorMessage="Contraseña invalida (Mínimo 8 caracteres)" SetFocusOnError="True" ValidationExpression="[0-9|a-z|A-Z]{8,36}"></asp:RegularExpressionValidator>
             <br />
             <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar" OnClick="btnIniciarSesion_Click"  />
             <br />
@@ -113,6 +123,7 @@
                 <asp:LinkButton ID="lnkbRecuperar" runat="server">¿Olvidaste tu contraseña?</asp:LinkButton>
 
             </div>
+            <asp:ValidationSummary ID="VRresumen" runat="server" DisplayMode="List" ShowMessageBox="True" ShowSummary="False" />
         </div>
         
            <div id="Contenedor3">
