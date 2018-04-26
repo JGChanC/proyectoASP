@@ -28,5 +28,10 @@ namespace Proyecto
             this.Session.Abandon();
             this.Response.Redirect("Login.aspx");
         }
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
