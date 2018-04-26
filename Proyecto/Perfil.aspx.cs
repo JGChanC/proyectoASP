@@ -11,7 +11,16 @@ namespace Proyecto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (this.Session["VSUsuario"] == null)
+            {
+                this.Response.Redirect("Login.aspx");
+            }
+        }
 
+        protected void lnkbCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Session.Abandon();
+            this.Response.Redirect("Login.aspx");
         }
     }
 }

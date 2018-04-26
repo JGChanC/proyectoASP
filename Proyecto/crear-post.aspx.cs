@@ -16,5 +16,11 @@ namespace Proyecto
                 this.Response.Redirect("Login.aspx");
             }
         }
+
+        protected void lnkbCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Session.Abandon();
+            this.Response.Redirect("Login.aspx");
+        }
     }
 }

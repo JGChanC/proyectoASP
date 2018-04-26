@@ -9,14 +9,21 @@
     <link rel="stylesheet" href="plugins/trumbowyg/ui/trumbowyg.css">
     <link rel="stylesheet" type="text/css" href="css/crearpost.css"/>
     <link rel="stylesheet" type="text/css" href="../css/header_sesion.css"/>
-    
+    <script>
+        function cerrar() {
+            var obj = document.getElementById("lnkbCerrarSesion");
+            if (obj) {
+                obj.click();
+            }
+        }
+    </script>
 </head>
 <body>
     <!--#include file="headers/header_sesion.aspx"-->
     <div class="contenedor">
         <div class="contenido-post">
                 <h1>Crear noticia</h1>
-              <form id="form1" runat="server">
+           <form id="form1" runat="server">
             <div>
                 <asp:TextBox ID="txtNombreNoticia" placeholder="Nombre de la noticia" runat="server"></asp:TextBox>
             </div>
@@ -31,7 +38,9 @@
             </div>
             <asp:Button ID="btnEnviar" Text="Guardar" runat="server" />
         </div>
+        <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click"></asp:LinkButton>
     </form>
+        
     </div>
      <script src="scripts/jquery-3.2.1.js"></script>
       <script src="plugins/trumbowyg/trumbowyg.js" ></script>

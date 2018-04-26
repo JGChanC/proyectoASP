@@ -41,8 +41,18 @@
             margin-top:-90px;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="../css/header_sesion.css"/>
+    <script>
+        function cerrar() {
+            var obj = document.getElementById("lnkbCerrarSesion");
+            if (obj) {
+                obj.click();
+            }
+        }
+    </script>
 </head>
 <body>
+     <!--#include file="headers/header_sesion.aspx"-->
     <form id="form1" runat="server">
     <div class="contenedor">
         <div class="Titulo">
@@ -70,6 +80,7 @@
 
         
     </div>
+         <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click"></asp:LinkButton>
     </form>
 </body>
 </html>
