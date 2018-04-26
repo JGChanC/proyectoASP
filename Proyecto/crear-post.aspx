@@ -25,7 +25,7 @@
                 <h1>Crear noticia</h1>
            <form id="form1" runat="server">
             <div>
-                <asp:TextBox ID="txtNombreNoticia" placeholder="Nombre de la noticia" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtNombreNoticia" placeholder="Nombre de la noticia" runat="server" OnTextChanged="txtNombreNoticia_TextChanged"></asp:TextBox>
             </div>
 
             <div>
@@ -36,7 +36,7 @@
             <div>
                 <asp:CheckBox  CssClass="theme-check" Text=" Hacer visible la noticia" runat="server" />
             </div>
-            <asp:Button ID="btnEnviar" Text="Guardar" runat="server" />
+            <asp:Button ID="btnEnviar" Text="Guardar" runat="server" OnClick="btnEnviar_Click" />
         </div>
         <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click"></asp:LinkButton>
     </form>

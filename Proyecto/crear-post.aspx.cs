@@ -22,5 +22,18 @@ namespace Proyecto
             this.Session.Abandon();
             this.Response.Redirect("Login.aspx");
         }
+
+        protected void txtNombreNoticia_TextChanged(object sender, EventArgs e)
+        {
+            this.ViewState["VENombreNoticia"] = txtNombreNoticia.Text;
+        }
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+            this.ViewState["VECuerpo"] = this.Request.Form["cuerpo_noticia"].ToString();
+            this.Session["VSTexto"] = this.ViewState["VECuerpo"];
+            this.Session["VSTitulo"] = this.ViewState["VENombreNoticia"];
+            this.Response.Redirect("ver-noticia.aspx");
+        }
     }
 }
