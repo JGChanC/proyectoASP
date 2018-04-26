@@ -76,6 +76,14 @@
             <div class="texto">
                 <asp:Label ID="Label1" runat="server" Text="Aprender a usar este sistemas es muy faicl. Lo primero que tenemos que hacer es..." Font-Size="18pt" Font-Strikeout="False"></asp:Label>
             </div>
+
+              <div class="mensaje">
+            <asp:Label ID="Label5" runat="server" Text="Comentarios" ForeColor="#3333CC"></asp:Label>
+            <br /> <br /> 
+            <asp:TextBox CssClass="cajita" ID="txtmensaje" runat="server" Width="448px" Height="83px" BorderWidth="1px"></asp:TextBox>
+            <br /> <br /> 
+            <asp:Button CssClass="botonEnviar" ID="btnEnviar" runat="server" Text="Enviar" BorderStyle="Ridge" />
+        </div>
         </div>
 
         
