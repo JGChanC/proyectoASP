@@ -102,7 +102,7 @@
            }
 
      .contenedor {
-          padding-top:60px;
+          padding-top:20px;
           border:0;
 
     }
