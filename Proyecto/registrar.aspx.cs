@@ -13,5 +13,37 @@ namespace Proyecto
         {
 
         }
+
+        protected void TxNombre_TextChanged(object sender, EventArgs e)
+        {
+            this.ViewState["VENombre"] = TxNombre.Text;
+        }
+
+        protected void TxApellido_TextChanged(object sender, EventArgs e)
+        {
+            this.ViewState["VEApellido"] = TxApellido.Text;
+        }
+
+        protected void TxtNomUsua_TextChanged(object sender, EventArgs e)
+        {
+            this.ViewState["VENomUsuario"] = TxtNomUsua.Text;
+        }
+
+        protected void TxPass_TextChanged(object sender, EventArgs e)
+        {
+            this.ViewState["VEPass"] = TxPass.Text;
+        }
+
+        protected void TxPassConf_TextChanged(object sender, EventArgs e)
+        {
+            this.ViewState["VEPassConf"] = TxPassConf.Text;
+        }
+
+        protected void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            this.Session["VSNombre"] = this.ViewState["VENombre"]+" "+this.ViewState["VEApellido"];
+            this.Session["VSUsuario"] = this.ViewState["VENombre"];
+            this.Response.Redirect("ListaPost.aspx");
+        }
     }
 }

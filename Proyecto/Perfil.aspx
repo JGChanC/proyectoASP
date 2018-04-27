@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="css/style.css" rel="stylesheet" /> 
-    <link rel="stylesheet" type="text/css" href="../css/header_sesion.css"/>
+    <link rel="stylesheet" type="text/css" href="css/header_sesion.css"/>
     <script>
         function cerrar() {
             var obj = document.getElementById("lnkbCerrarSesion");
