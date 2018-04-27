@@ -28,7 +28,7 @@
 
         .Titulo{
             padding:10px;
-            height:500px;
+            height:auto;
             box-sizing:border-box;
         }
         .imagen_mini{
@@ -81,9 +81,18 @@
               <div class="mensaje">
             <asp:Label ID="Label5" runat="server" Text="Comentarios" ForeColor="#3333CC"></asp:Label>
             <br /> <br /> 
-            <asp:TextBox CssClass="cajita" ID="txtmensaje" runat="server" Width="448px" Height="83px" BorderWidth="1px"></asp:TextBox>
+            <asp:TextBox CssClass="cajita" ID="txtmensaje" runat="server" Width="448px" Height="83px" BorderWidth="1px" OnTextChanged="txtmensaje_TextChanged"></asp:TextBox>
             <br /> <br /> 
             <asp:Button CssClass="botonEnviar" ID="btnEnviar" runat="server" Text="Enviar" BorderStyle="Ridge" OnClick="btnEnviar_Click" />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <asp:Label ID="lblComentario" runat="server" Text="."></asp:Label>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
         </div>
         </div>
 

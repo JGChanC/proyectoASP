@@ -9,6 +9,7 @@ namespace Proyecto
 {
     public partial class ver_noticia : System.Web.UI.Page
     {
+        String a;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (this.Session["VSUsuario"] == null)
@@ -31,7 +32,14 @@ namespace Proyecto
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
+            txtmensaje.Text = "";
+            lblComentario.Text = (String)this.ViewState["comentario"];
+        }
 
+        protected void txtmensaje_TextChanged(object sender, EventArgs e)
+        {
+            a = txtmensaje.Text;
+            this.ViewState["comentario"] = a;
         }
     }
 }
