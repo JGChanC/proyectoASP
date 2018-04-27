@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Perfil | POST</title>
+    <title>POST | Perfil</title>
     <link href="css/style.css" rel="stylesheet"  type="text/css"/> 
     <link rel="stylesheet" type="text/css" href="css/header_sesion.css"/>
      <script src="scripts/jquery-3.2.1.js"></script>
