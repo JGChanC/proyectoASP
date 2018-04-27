@@ -53,6 +53,7 @@ namespace Proyecto
                 this.Response.Redirect("ListaPost.aspx");//MANDA AL INICIO
             }else
             {
+                //MENSAJE DE USUARIO INCORRECTO
                  string script = "alert(\"Usuario o Contraseña Incorrectos\");";
              ScriptManager.RegisterStartupScript(this, GetType(),
                                    "ServerControlScript", script, true);
