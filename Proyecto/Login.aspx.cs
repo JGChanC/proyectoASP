@@ -37,9 +37,7 @@ namespace Proyecto
             //GUARDO LOS DATOS DEL USUARIO EN LAS VARIABLES DE SESION
             this.Session["VSUsuario"] = this.ViewState["VEUsuario"];
             this.Session["VSPass"] = this.ViewState["VEPass"]; 
-            /* string script = "alert(\""+ this.Session["VSUsuario"]+" "+ this.Session["VSPass"]+"\");";
-             ScriptManager.RegisterStartupScript(this, GetType(),
-                                   "ServerControlScript", script, true);*/
+            
             if (chbxRecuerdame.Checked)//SOLO SI TEIENE SELECCIONADO RECUERDAME GUARDA LA COOKIE DEL USUARIO
             {
                 HttpCookie ckUser = new HttpCookie("User", ""+this.Session["VSUsuario"]);
@@ -50,7 +48,16 @@ namespace Proyecto
                 this.Response.Cookies.Add(ckPass);
 
             }
-            this.Response.Redirect("ListaPost.aspx");//MANDA AL INICIO
+            if (this.Session["VSUsuario"].Equals("RogerCanche")&& this.Session["VSPass"].Equals("12345678"))//USUARIO FIJADO
+            {
+                this.Response.Redirect("ListaPost.aspx");//MANDA AL INICIO
+            }else
+            {
+                 string script = "alert(\"Usuario o Contraseña Incorrectos\");";
+             ScriptManager.RegisterStartupScript(this, GetType(),
+                                   "ServerControlScript", script, true);
+            }
+
 
         }
 
