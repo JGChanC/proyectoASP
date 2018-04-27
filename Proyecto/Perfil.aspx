@@ -89,7 +89,7 @@
         	</div>
 	        
 	        <div class="actividad">
-                <div class"box_info">
+                <div class="box_info">
                     <asp:Label ID="Label2" runat="server" Text="Usuario desde:"></asp:Label>
                     &nbsp
                     <asp:Label ID="Label3" runat="server" Text="2017"></asp:Label>
