@@ -18,7 +18,7 @@
          body{
             margin:auto;
 	        font-family: helvetica;
-            background-image: url(Imagenes/background_perfil.jpg);
+            background-image: url(Imagenes/background_login.jpg);
             background-repeat: no-repeat;
             background-size:cover;
             /*padding-top: 50px;*/

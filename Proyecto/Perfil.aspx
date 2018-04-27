@@ -36,13 +36,15 @@
         }
 
         #lblNombre{
-            color:blue;
+            color:white;
             font-size:30px;
         }
 
         .contenedor {
             margin-top:80px;
-            border:0;
+            border:1px black solid;
+            background-color: rgba(255,255,255,.7);
+            border-radius: 5px;
         }
 
         .cajita {
@@ -62,7 +64,7 @@
     <div class="contenedor">
         <div class="primera_caja">
         	<div class="imagen">
-        		&nbsp;&nbsp;&nbsp;
+        		&nbsp;&nbsp;
         		<asp:Image src="Imagenes/icono_perfil.png" runat="server" Height="189px" Width="170px" BorderStyle="Dotted" />
                 <br />
                 <br />
@@ -70,7 +72,7 @@
             </div>
 
         	<div class="info">
-        		<h1 aria-busy="False">Mi Perfil</h1>
+        		<h1 aria-busy="False" style="font-weight:normal;">Mi Perfil</h1>
                 <br /> 
         		<hr class="arregloss" />
                 <br /> 
@@ -79,20 +81,20 @@
                 <div class="acomodar">
                     <asp:Label CssClass="caja_seg" ID="lblSeg" runat="server" Text="Label">Seguidores:</asp:Label>
                 &nbsp;&nbsp
-                <asp:Label ID="lblCantSeg" runat="server" Text="Label">0</asp:Label>
+                <asp:Label ID="lblCantSeg" runat="server" Text="0" ForeColor="White"></asp:Label>
                 &nbsp;&nbsp
                 <asp:Label CssClass="caja_seg" ID="lblSegui" runat="server" Text="Label">Seguidos:</asp:Label>
                  &nbsp;&nbsp
-                <asp:Label ID="lblCantSegui" runat="server" Text="Label">0</asp:Label>
+                <asp:Label ID="lblCantSegui" runat="server" Text="0" ForeColor="White"></asp:Label>
                 </div>
                 
         	</div>
 	        
 	        <div class="actividad">
                 <div class="box_info">
-                    <asp:Label ID="Label2" runat="server" Text="Usuario desde:"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Usuario desde:" Font-Italic="True"></asp:Label>
                     &nbsp
-                    <asp:Label ID="Label3" runat="server" Text="2017"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="2017" Font-Italic="True"></asp:Label>
                 </div>
                 <br /> <br />
 	        	<h3>ACTIVIDAD RECIENTE</h3>
@@ -107,7 +109,7 @@
         </div>
         <br /> <br />
         <div class="mensaje">
-            <asp:Label ID="Label1" runat="server" Text="Enviar un mensaje..." ForeColor="#3333CC"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Enviar un mensaje..." ForeColor="Blue"></asp:Label>
             <br /> <br /> 
             <textarea id="txtmensaje" class="cajita" runat="server" width="448px" height="83px" border="1px"></textarea>
             <asp:RequiredFieldValidator ID="RFrequireComenta" runat="server" ControlToValidate="txtmensaje" Display="None" ErrorMessage="No ingresó comentario"></asp:RequiredFieldValidator>
