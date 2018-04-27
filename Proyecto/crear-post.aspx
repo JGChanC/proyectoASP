@@ -77,7 +77,7 @@
             <asp:Button ID="btnEnviar" Text="Guardar" runat="server" OnClick="btnEnviar_Click" />
                 <asp:ValidationSummary ID="VResumenCrearNoticia" runat="server" DisplayMode="List" ShowMessageBox="True" ShowSummary="False" />
         </div>
-        <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click"></asp:LinkButton>
+        <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click" CausesValidation="False"></asp:LinkButton>
     </form>
         
     </div>
