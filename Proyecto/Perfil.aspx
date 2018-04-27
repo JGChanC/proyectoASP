@@ -15,6 +15,13 @@
             }
         }
     </script>
+    <style>
+        #lblNombre{
+            color:blue;
+            font-size:30px;
+        }
+
+    </style>
 </head>
 <body>
     <!--#include file="headers/header_sesion.aspx"-->
@@ -34,7 +41,7 @@
                 <br /> 
         		<hr class="arregloss" />
                 <br /> 
-	            <h2>Roger Iván Canche Yam</h2>
+	            <asp:Label ID="lblNombre" runat="server" Text="Roger Iván Canche Yam"></asp:Label>
                 <br />
                 <div class="acomodar">
                     <asp:Label CssClass="caja_seg" ID="lblSeg" runat="server" Text="Label">Seguidores:</asp:Label>

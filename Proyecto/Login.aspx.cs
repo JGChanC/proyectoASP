@@ -21,11 +21,13 @@ namespace Proyecto
             if (ck != null)
             {
                 txtUsuario.Text = ck.Value;
+                this.ViewState["VEUsuario"] = txtUsuario.Text;
             }
             ck2 = this.Request.Cookies["Pass"];
             if (ck2 != null)
             {
                 txtPassword.Text = ck2.Value;
+                
             }
         }
 
