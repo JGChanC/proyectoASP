@@ -12,6 +12,7 @@ namespace Proyecto
         String a;
         protected void Page_Load(object sender, EventArgs e)
         {
+            //SI SE SELECCIONO UNA NOTICIA EN UNA VENTANA ANTERIOR SE DESPLIEGA LA INFORMACION
             if (this.Session["VSUsuario"] == null)
             {
                 this.Response.Redirect("Login.aspx");
@@ -26,6 +27,7 @@ namespace Proyecto
 
         protected void lnkbCerrarSesion_Click(object sender, EventArgs e)
         {
+            //TERMINA LA SESION CREADA
             this.Session.Abandon();
             this.Response.Redirect("Login.aspx");
         }

@@ -41,6 +41,7 @@ namespace Proyecto
 
         protected void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            //GUARDA EN VARIABLES DE SESION LOS DATOS DEL USUARIO QUE SE CREA
             this.Session["VSNombre"] = this.ViewState["VENombre"]+" "+this.ViewState["VEApellido"];
             this.Session["VSUsuario"] = this.ViewState["VENomUsuario"];
             HttpCookie ckUser = new HttpCookie("User", "" + this.Session["VSUsuario"]);

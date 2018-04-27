@@ -17,13 +17,14 @@ namespace Proyecto
             {
                 this.Response.Redirect("ListaPost.aspx");
             }
+
             ck = this.Request.Cookies["User"];
-            if (ck != null)
+            if (ck != null)//Si tiene puesto recordarme te agrega el usuario que se guerdo en un cookie
             {
                 txtUsuario.Text = ck.Value;
                 this.ViewState["VEUsuario"] = txtUsuario.Text;
             }
-            ck2 = this.Request.Cookies["Pass"];
+            ck2 = this.Request.Cookies["Pass"];//NO FUNCIONA
             if (ck2 != null)
             {
                 txtPassword.Text = ck2.Value;
@@ -33,12 +34,13 @@ namespace Proyecto
 
         protected void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            //GUARDO LOS DATOS DEL USUARIO EN LAS VARIABLES DE SESION
             this.Session["VSUsuario"] = this.ViewState["VEUsuario"];
             this.Session["VSPass"] = this.ViewState["VEPass"]; 
             /* string script = "alert(\""+ this.Session["VSUsuario"]+" "+ this.Session["VSPass"]+"\");";
              ScriptManager.RegisterStartupScript(this, GetType(),
                                    "ServerControlScript", script, true);*/
-            if (chbxRecuerdame.Checked)
+            if (chbxRecuerdame.Checked)//SOLO SI TEIENE SELECCIONADO RECUERDAME GUARDA LA COOKIE DEL USUARIO
             {
                 HttpCookie ckUser = new HttpCookie("User", ""+this.Session["VSUsuario"]);
                 ckUser.Expires = DateTime.Now.AddMinutes(2);
@@ -48,10 +50,11 @@ namespace Proyecto
                 this.Response.Cookies.Add(ckPass);
 
             }
-            this.Response.Redirect("ListaPost.aspx");
+            this.Response.Redirect("ListaPost.aspx");//MANDA AL INICIO
 
         }
 
+        //GUARDAR LOS VALORES DE LOS TxBx
         protected void txtUsuario_TextChanged(object sender, EventArgs e)
         {
             this.ViewState["VEUsuario"] = txtUsuario.Text;
