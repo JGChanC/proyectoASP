@@ -118,7 +118,7 @@
             <asp:ValidationSummary ID="VRresumenComenta" runat="server" DisplayMode="List" ShowMessageBox="True" ShowSummary="False" />
         </div>
     </div>
-         <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click"></asp:LinkButton>
+         <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click" CausesValidation="False"></asp:LinkButton>
 
     </form>
     <p>
