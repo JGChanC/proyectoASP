@@ -42,8 +42,12 @@ namespace Proyecto
         protected void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             this.Session["VSNombre"] = this.ViewState["VENombre"]+" "+this.ViewState["VEApellido"];
-            this.Session["VSUsuario"] = this.ViewState["VENombre"];
+            this.Session["VSUsuario"] = this.ViewState["VENomUsuario"];
+            HttpCookie ckUser = new HttpCookie("User", "" + this.Session["VSUsuario"]);
+            ckUser.Expires = DateTime.Now.AddMinutes(5);
+            this.Response.Cookies.Add(ckUser);
             this.Response.Redirect("ListaPost.aspx");
+            
         }
     }
 }

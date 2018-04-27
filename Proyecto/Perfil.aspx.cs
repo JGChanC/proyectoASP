@@ -15,6 +15,10 @@ namespace Proyecto
             {
                 this.Response.Redirect("Login.aspx");
             }
+            if (this.Session["VSNombre"] != null)
+            {
+                lblNombre.Text =(String) this.Session["VSNombre"];
+            }
         }
 
         protected void lnkbCerrarSesion_Click(object sender, EventArgs e)
