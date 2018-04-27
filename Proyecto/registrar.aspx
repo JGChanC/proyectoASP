@@ -121,13 +121,13 @@
                 <div id="contodo">
                     <div>
                  
-                        <asp:TextBox ID="TxNombre" runat="server" CssClass="txtLog" placeholder="Nombre(s)"></asp:TextBox>
+                        <asp:TextBox ID="TxNombre" runat="server" CssClass="txtLog" placeholder="Nombre(s)" OnTextChanged="TxNombre_TextChanged"></asp:TextBox>
                        
                           </div>
 
                     <div>
                        
-                        <asp:TextBox ID="TxApellido" CssClass="txtLog"  placeholder="Apellido(s)" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TxApellido" CssClass="txtLog"  placeholder="Apellido(s)" runat="server" OnTextChanged="TxApellido_TextChanged"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RFrequireApellido" runat="server" ControlToValidate="TxApellido" Display="None" ErrorMessage="No ingresó su(s) apellido(s)" SetFocusOnError="True"></asp:RequiredFieldValidator>
                      <asp:CustomValidator ID="CVtamanioApellido" runat="server" ControlToValidate="TxApellido" Display="None" ErrorMessage="El correo debe contener menos de 150 caracteres" ClientValidationFunction="validaNombreTamanio"></asp:CustomValidator>
                      <asp:RegularExpressionValidator ID="REexpresionApellido" runat="server" ControlToValidate="TxApellido" Display="None" ErrorMessage="El apellido no cumple con formato válido" SetFocusOnError="True" ValidationExpression="([A-Za-zñáéíóú]+[\s]*)+"></asp:RegularExpressionValidator>
@@ -144,7 +144,7 @@
 
                     <div>
                        
-                        <asp:TextBox ID="TxtNomUsua" CssClass="txtLog"  placeholder="Nombre de usuario" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TxtNomUsua" CssClass="txtLog"  placeholder="Nombre de usuario" runat="server" OnTextChanged="TxtNomUsua_TextChanged"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RFrequireNomUsua" runat="server" ControlToValidate="TxtNomUsua" Display="None" ErrorMessage="No ingresó su nombre de usuario" SetFocusOnError="True"></asp:RequiredFieldValidator>
                      <asp:CustomValidator ID="CVtamanioNomUsua" runat="server" ControlToValidate="TxtNomUsua" Display="None" ErrorMessage="El nombre de usuario debe contener menos de 20 y mas de 8 caracteres" ClientValidationFunction="validaUsuaTamanio"></asp:CustomValidator>
                      <asp:RegularExpressionValidator ID="REexpresionNomUsua" runat="server" ControlToValidate="TxtNomUsua" Display="None" ErrorMessage="El nombre de usuario no cumple con formato válido" SetFocusOnError="True" ValidationExpression="[0-9A-Za-z]+"></asp:RegularExpressionValidator>
@@ -152,7 +152,7 @@
 
                     <div>
                         
-                        <asp:TextBox ID="TxPass" runat="server" CssClass="txtLog"  placeholder="Contraseña" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="TxPass" runat="server" CssClass="txtLog"  placeholder="Contraseña" TextMode="Password" OnTextChanged="TxPass_TextChanged"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RFrequirePass" runat="server" ControlToValidate="TxPass" Display="None" ErrorMessage="No ingresó su contraseña" SetFocusOnError="True"></asp:RequiredFieldValidator>
                      <asp:CustomValidator ID="CVtamanioContra" runat="server" ControlToValidate="TxPass" Display="None" ErrorMessage="La contraseña debe contener menos de 20 y mas de 8 caracteres" ClientValidationFunction="validaContraTamanio"></asp:CustomValidator>
                      <asp:RegularExpressionValidator ID="REexpresionContra" runat="server" ControlToValidate="TxPass" Display="None" ErrorMessage="la contraseña no cumple con formato válido" SetFocusOnError="True" ValidationExpression="[0-9A-Za-z]+"></asp:RegularExpressionValidator>
@@ -160,7 +160,7 @@
 
                     <div>
                        
-                        <asp:TextBox ID="TxPassConf" CssClass="txtLog" runat="server"  placeholder="Confirmar contraseña" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="TxPassConf" CssClass="txtLog" runat="server"  placeholder="Confirmar contraseña" TextMode="Password" OnTextChanged="TxPassConf_TextChanged"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RFrequireComPass" runat="server" ControlToValidate="TxPassConf" Display="None" ErrorMessage="No ingresó comparar contraseña" SetFocusOnError="True"></asp:RequiredFieldValidator>
                      <asp:CustomValidator ID="CVtamanioComPass" runat="server" ControlToValidate="TxPassConf" Display="None" ErrorMessage="Su contraseña repetida debe contener menos de 20 y mas de 8 caracteres" ClientValidationFunction="validaContraTamanio"></asp:CustomValidator>
                         <asp:CompareValidator ID="CVConfPass" runat="server" ControlToCompare="TxPass" ControlToValidate="TxPassConf" Display="None" ErrorMessage="La confirmación de contraseña es incorrecta"></asp:CompareValidator>
@@ -170,7 +170,7 @@
                    
                     <asp:CheckBox ID="cbAceptoTermino" CssClass="lnkbRecuperar"   runat="server"  onClick="habilitarButton()"  Text ="    Acepto terminos y condiciones." />
                     <br />
-                    <asp:Button ID="btnIniciarSesion" runat="server"  CssClass="disabled" disabled="disabled" Text="Registrar" />
+                    <asp:Button ID="btnIniciarSesion" runat="server"  CssClass="disabled" disabled="disabled" Text="Registrar" OnClick="btnIniciarSesion_Click" />
     
                 </div>
                 </form>
