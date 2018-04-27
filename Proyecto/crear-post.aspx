@@ -82,11 +82,11 @@
         
     </div>
      <script src="scripts/jquery-3.2.1.js"></script>
-      <script src="plugins/trumbowyg/trumbowyg.js" ></script>
+     <script src="plugins/trumbowyg/trumbowyg.js" ></script>
 	  <script src="plugins/Trumbowyg/langs/es.min.js"></script>
     
     <script>
         $('#cuerpo_noticia').trumbowyg();
-</script>
+    </script>
 </body>
 </html>

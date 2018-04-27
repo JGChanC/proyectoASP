@@ -37,15 +37,7 @@
        }
 
 
-       $("#btnIniciarSesion").click(function () {
-           console.log();
-           if ($(this).is(':disabled')) {
-               alert("No aceptó términos y condiciones");
-           }
-       });
-
-
-       function validaUsuaTamanio(sender, args) {
+        function validaUsuaTamanio(sender, args) {
            if (args.Value.length >= 8 && args.Value.length <= 20) {
 
                args.IsValid = true;

@@ -53,7 +53,14 @@
                 padding 10px 20px;
                 height:200px;
                 resize:none;
+        }
+
+        .imagen {
         
+              display: flex;
+              align-items: center;
+              justify-content: center;  
+
         }
 
     </style>
@@ -64,11 +71,8 @@
     <div class="contenedor">
         <div class="primera_caja">
         	<div class="imagen">
-        		&nbsp;&nbsp;
-        		<asp:Image src="Imagenes/icono_perfil.png" runat="server" Height="189px" Width="170px" BorderStyle="Dotted" />
-                <br />
-                <br />
-                <br />
+        		
+        		<asp:Image src="Imagenes/icono_perfil.png" runat="server" Height="150px" Width="150px" BorderStyle="Dotted" />
             </div>
 
         	<div class="info">

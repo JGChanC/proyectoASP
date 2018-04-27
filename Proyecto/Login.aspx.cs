@@ -24,7 +24,7 @@ namespace Proyecto
                 txtUsuario.Text = ck.Value;
                 this.ViewState["VEUsuario"] = txtUsuario.Text;
             }
-            ck2 = this.Request.Cookies["Pass"];//NO FUNCIONA
+            ck2 = this.Request.Cookies["Pass"];//NO GUARDA PASSWORD
             if (ck2 != null)
             {
                 txtPassword.Text = ck2.Value;

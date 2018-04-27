@@ -9,7 +9,7 @@ namespace Proyecto
 {
     public partial class ver_noticia : System.Web.UI.Page
     {
-        String a;
+        String a; //Donde guarda el msj del comentario
         protected void Page_Load(object sender, EventArgs e)
         {
             //SI SE SELECCIONO UNA NOTICIA EN UNA VENTANA ANTERIOR SE DESPLIEGA LA INFORMACION
@@ -34,12 +34,17 @@ namespace Proyecto
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
+            //Enviar Mensaje a guardar
             txtmensaje.Text = "";
             lblComentario.Text = (String)this.ViewState["comentario"];
+            string script = "alert(\"Comentario enviado correctamente\");";
+            ScriptManager.RegisterStartupScript(this, GetType(),
+                                  "ServerControlScript", script, true);
         }
 
         protected void txtmensaje_TextChanged(object sender, EventArgs e)
         {
+            //SETEO del msj a una variable de estado
             a = txtmensaje.Text;
             this.ViewState["comentario"] = a;
         }

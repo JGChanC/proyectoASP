@@ -41,8 +41,24 @@
             float:right;
             margin-top:-90px;
         }
+
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+         .contenedor {
+            margin-top:80px;
+            border:1px black solid;
+            background-color: rgba(255,255,255,.7);
+            border-radius: 5px;
+        }
+
     </style>
     <link rel="stylesheet" type="text/css" href="../css/header_sesion.css"/>
+    <script src="scripts/jquery-3.2.1.js"></script>
+    <appSettings>
+        <add key="ValidationSettings:UnobtrusiveValidationMode" value="None"></add>
+    </appSettings>
     <script>
         function cerrar() {
             var obj = document.getElementById("lnkbCerrarSesion");
@@ -82,15 +98,14 @@
             <asp:Label ID="Label5" runat="server" Text="Comentarios" ForeColor="#3333CC"></asp:Label>
             <br /> <br /> 
             <asp:TextBox CssClass="cajita" ID="txtmensaje" runat="server" Width="448px" Height="83px" BorderWidth="1px" OnTextChanged="txtmensaje_TextChanged"></asp:TextBox>
+            &nbsp;<asp:RequiredFieldValidator ID="RFrequireComenta" runat="server" ControlToValidate="txtmensaje" Display="None" ErrorMessage="No ingresó comentario"></asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="CVtamanioComentario" runat="server" ClientValidationFunction="tamanioComentario" ControlToValidate="txtmensaje" Display="None" ErrorMessage="El comentario no debe excederse de 140 caracteres"></asp:CustomValidator>
+            <asp:RegularExpressionValidator ID="REexpresionComentario" runat="server" ControlToValidate="txtmensaje" Display="None" ErrorMessage="El comentario no puede contener caracteres especiales" ValidationExpression="([0-9A-ZÁÉÍÓÚa-zñáéíóú]+[\s]*)+"></asp:RegularExpressionValidator>
             <br /> <br /> 
             <asp:Button CssClass="botonEnviar" ID="btnEnviar" runat="server" Text="Enviar" BorderStyle="Ridge" OnClick="btnEnviar_Click" />
-                  <br />
-                  <br />
-                  <br />
+                  <asp:ValidationSummary ID="VResumenComentario" runat="server" DisplayMode="List" ShowMessageBox="True" ShowSummary="False" />
                   <br />
                   <asp:Label ID="lblComentario" runat="server" Text="."></asp:Label>
-                  <br />
-                  <br />
                   <br />
                   <br />
         </div>
@@ -98,7 +113,7 @@
 
         
     </div>
-         <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click"></asp:LinkButton>
+         <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click" CausesValidation="false"></asp:LinkButton>
     </form>
 </body>
 </html>

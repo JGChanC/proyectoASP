@@ -94,6 +94,33 @@ namespace Proyecto {
         protected global::System.Web.UI.WebControls.TextBox txtmensaje;
         
         /// <summary>
+        /// RFrequireComenta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFrequireComenta;
+        
+        /// <summary>
+        /// CVtamanioComentario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CVtamanioComentario;
+        
+        /// <summary>
+        /// REexpresionComentario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REexpresionComentario;
+        
+        /// <summary>
         /// btnEnviar control.
         /// </summary>
         /// <remarks>
@@ -101,6 +128,15 @@ namespace Proyecto {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEnviar;
+        
+        /// <summary>
+        /// VResumenComentario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary VResumenComentario;
         
         /// <summary>
         /// lblComentario control.
