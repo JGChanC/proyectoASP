@@ -115,7 +115,7 @@
                 <form id="registrar" runat="server">
                      <img id="imgLogin" alt="" src="/Imagenes/icono_login.png" /><asp:RequiredFieldValidator ID="RFrequireNombre" runat="server" ControlToValidate="TxNombre" Display="None" ErrorMessage="No ingresó su(s) nombre(s)" SetFocusOnError="True"></asp:RequiredFieldValidator>
                      <asp:CustomValidator ID="CVtamanioNombre" runat="server" ControlToValidate="TxNombre" Display="None" ErrorMessage="El nombre debe contener menos de 150 caracteres" ClientValidationFunction="validaNombreTamanio"></asp:CustomValidator>
-                     <asp:RegularExpressionValidator ID="REexpresionNombre" runat="server" ControlToValidate="TxNombre" Display="None" ErrorMessage="El nombre no cumple con formato valido" SetFocusOnError="True" ValidationExpression="([A-Za-zñáéíóú]+[\s]*)+"></asp:RegularExpressionValidator>
+                     <asp:RegularExpressionValidator ID="REexpresionNombre" runat="server" ControlToValidate="TxNombre" Display="None" ErrorMessage="El nombre no cumple con formato valido" SetFocusOnError="True" ValidationExpression="([A-ZÁÉÍÓÚa-zñáéíóú]+[\s]*)+"></asp:RegularExpressionValidator>
                      <br />
                      <asp:Label ID="Label1" runat="server" Text="Registrarse"></asp:Label>
                 <div id="contodo">

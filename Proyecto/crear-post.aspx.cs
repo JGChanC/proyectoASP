@@ -30,10 +30,14 @@ namespace Proyecto
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
-            this.ViewState["VECuerpo"] = this.Request.Form["cuerpo_noticia"].ToString();
-            this.Session["VSTexto"] = this.ViewState["VECuerpo"];
-            this.Session["VSTitulo"] = this.ViewState["VENombreNoticia"];
-            this.Response.Redirect("ver-noticia.aspx");
+
+                this.ViewState["VECuerpo"] = this.Request.Form["cuerpo_noticia"];
+                this.Session["VSTexto"] = this.ViewState["VECuerpo"];
+                this.Session["VSTitulo"] = this.ViewState["VENombreNoticia"];
+                this.Response.Redirect("ver-noticia.aspx");
+            
+           
+           
         }
 
 
