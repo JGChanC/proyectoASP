@@ -16,9 +16,10 @@ body{
 .contenedor{
 	width: 980px;
 	margin: auto;
+    margin-top:80px;
 	padding: 10px;
 	box-sizing: border-box;    
-	border: #6BA3E1 solid 10px;
+	border: #6BA3E1 solid 0px;
 }
 
 .primera_caja{

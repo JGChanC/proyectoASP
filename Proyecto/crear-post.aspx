@@ -42,6 +42,13 @@
             }
         }
     </script>
+
+    <style>
+         .contenedor {
+            margin-top:80px;
+            border:0;
+        }
+    </style>
 </head>
 <body>
     <!--#include file="headers/header_sesion.aspx"-->
@@ -52,7 +59,7 @@
             <div>
                 <asp:RequiredFieldValidator ID="RFrequireNombreNot" runat="server" ControlToValidate="txtNombreNoticia" Display="None" ErrorMessage="No ingresó el nombre de la noticia"></asp:RequiredFieldValidator>
                 <asp:CustomValidator ID="CVTamanio" runat="server" ControlToValidate="txtNombreNoticia" Display="None" ErrorMessage="EL nombre de la noticia no debe exceder de 200 caracteres" ClientValidationFunction="validaNombreTamanio"></asp:CustomValidator>
-                <asp:RegularExpressionValidator ID="REespresionNombreNot" runat="server" ControlToValidate="txtNombreNoticia" Display="None" ErrorMessage="El nombre de la noticia no tiene un formato válido" ValidationExpression="([A-ZÁÉÍÓÚa-zñáéíóú]+[\s]*)+"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="REespresionNombreNot" runat="server" ControlToValidate="txtNombreNoticia" Display="None" ErrorMessage="El nombre de la noticia no tiene un formato válido" ValidationExpression="([0-9A-ZÁÉÍÓÚa-zñáéíóú]+[\s]*)+"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtNombreNoticia" placeholder="Nombre de la noticia" runat="server" OnTextChanged="txtNombreNoticia_TextChanged"></asp:TextBox>
             </div>
 

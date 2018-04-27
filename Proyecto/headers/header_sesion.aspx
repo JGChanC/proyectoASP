@@ -1,7 +1,7 @@
 ﻿
     <div id="menu_login_regis">
     <div id="mi_header">
-         <a href="ListaPost.aspx" id="btnCrearPost" class="btnHeader">Ver Post's</a>
+         <a href="ListaPost.aspx" id="btnInicioPosts" class="btnHeader">Ver Post's</a>
         <a href="crear-post.aspx" id="btnCrearPost" class="btnHeader">Nuevo Post</a>
         <a href="Perfil.aspx" id="btnPerfil" class="btnHeader">Ver Perfil</a>
         <a runat="server" id="btnCerrar" class="btnHeader" onclick="cerrar()">Cerrar Sesion</a>
