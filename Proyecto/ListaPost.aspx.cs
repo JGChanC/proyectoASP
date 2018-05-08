@@ -22,18 +22,8 @@ namespace Proyecto
             SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Mario\\Documents\\Aplicaciones_NET\\U4\\conn_bd\\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30");
             conn.Open();
             SqlCommand command = new SqlCommand("SELECT *, (SELECT COUNT(*) FROM Likes WHERE id_noticia = id) As Likes, (SELECT COUNT(*) FROM Comentarios WHERE id_noticia = id) As Comentario  FROM Noticias;", conn);
-            //SqlCommand command = new SqlCommand("SELECT id, Titulo, Cuerpo, (SELECT COUNT(*) FROM Likes WHERE id_noticia = id) As Likes  FROM Noticias;", conn);
-            Int16 contador = 1;
+           
 
-           /* //OBTENGO EL NUMERO DE LIKES
-            SqlCommand command2 = new SqlCommand("SELECT COUNT(*) FROM Likes WHERE id_noticia=" + reader["id"], conn2);
-            using (SqlDataReader reader2 = command2.ExecuteReader())
-            {
-                if (reader2.Read())
-                {
-                    Likes = Convert.ToInt16(reader2["COUNT"]);
-                }
-            }*/
 
             using (SqlDataReader reader = command.ExecuteReader())
             {
@@ -63,7 +53,6 @@ namespace Proyecto
                "</div>"
                     });
 
-                    contador++;
 
                 }
             }
