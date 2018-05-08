@@ -15,6 +15,24 @@ namespace Proyecto
             {
                 this.Response.Redirect("Login.aspx");
             }
+
+              
+            for (Int16 c = 0;c<2;c++)
+            {
+                contenedor.Controls.Add(new Label()
+                {
+                    Text = "<div class=\"lista_post\">" +
+                "<div class=\"izquierda\">" +
+                "<a class=\"links_post\" id=\"lnkbPoo2\" runat=\"server\" href=\"ver-noticia.aspx\">Programacion Orientada a Objetos</a> <br /> <br /> " +
+                " <asp:Label ID=\"lblPost1\" runat=\"server\">Desarrollo web es un término que define la creación de sitios web para Internet o una intranet. " +
+                "Para conseguirlo se hace uso de tecnologías de software del lado del servidor y del cliente que involucran una combinación de procesos " +
+                "de base de datos con el uso de un navegador web a fin de realizar determinadas tareas o mostrar información.</asp:Label>" +
+                "</div>" +
+                "</div>"
+                });
+            
+            }
+            
             
         }
 
@@ -36,32 +54,6 @@ namespace Proyecto
         }
 
 
-        protected void lnkbJQ_Click(object sender, EventArgs e)
-        {
-            this.Session["VSTexto"] = lblPost4.Text;
-            this.Session["VSTitulo"] = lnkbJQ.Text;
-            this.Response.Redirect("ver-noticia.aspx");
-        }
-
-        protected void lnkbJS_Click(object sender, EventArgs e)
-        {
-            this.Session["VSTexto"] = lblPost3.Text;
-            this.Session["VSTitulo"] = lnkbJS.Text;
-            this.Response.Redirect("ver-noticia.aspx");
-        }
-
-        protected void lnkbPoo_Click1(object sender, EventArgs e)
-        {
-            this.Session["VSTexto"] = lblPost2.Text;
-            this.Session["VSTitulo"] = lnkbPoo.Text;
-            this.Response.Redirect("ver-noticia.aspx");
-        }
-
-        protected void lnkbASP_Click(object sender, EventArgs e)
-        {
-            this.Session["VSTexto"] = lblPost5.Text;
-            this.Session["VSTitulo"] = lnkbASP.Text;
-            this.Response.Redirect("ver-noticia.aspx");
-        }
+       
     }
 }
