@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Proyecto
 {
@@ -16,10 +18,41 @@ namespace Proyecto
                 this.Response.Redirect("Login.aspx");
             }
 
-              
-            for (Int16 c = 0;c<2;c++)
+            // Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Mario\Documents\Aplicaciones_NET\U4\conn_bd\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30
+            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Mario\\Documents\\Aplicaciones_NET\\U4\\conn_bd\\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30");
+            conn.Open();
+            SqlCommand command = new SqlCommand("SELECT * FROM Noticias;", conn);
+            using (SqlDataReader reader = command.ExecuteReader())
             {
-                contenedor.Controls.Add(new Label()
+                while (reader.Read())
+                {
+                    //INSERTA EL CODIGO HTML CON LA INFO DE LAS NOTICIAS
+                    contenedor.Controls.Add(new Label()
+                    {
+                        Text = "<div class=\"lista_post\">" +
+               "<div class=\"izquierda\">" +
+               "<a class=\"links_post\" id=\"lnkbPoo2\" runat=\"server\" href=\"ver-noticia.aspx?id=" + reader["id"] + "\">" + reader["Titulo"] + "</a> <br /> <br /> " +
+               " <asp:Label ID=\"lblPost1\" runat=\"server\">" + reader["Cuerpo"]+
+               "</asp:Label>" +
+               "</div>" +
+               "<div class=\"derecha\">" +
+               " <div class=\"like\">" +
+               "   <p style=\"margin - bottom:5px; \">Likes</p>" +
+               "    <p>7</p>" +
+               " </div>" +
+               " <div class=\"coment\">" +
+               "   <p style=\"margin - bottom:5px; \">Comentarios</p>" +
+               "   <p>7</p>" +
+               " </div>" +
+               " </div>" +
+               "</div>"
+                    });
+
+
+                }
+            }
+            //INSERTAR EL CODIGO HTML DE LAS NOTICIAS
+           /* contenedor.Controls.Add(new Label()
                 {
                     Text = "<div class=\"lista_post\">" +
                 "<div class=\"izquierda\">" +
@@ -28,10 +61,20 @@ namespace Proyecto
                 "Para conseguirlo se hace uso de tecnologías de software del lado del servidor y del cliente que involucran una combinación de procesos " +
                 "de base de datos con el uso de un navegador web a fin de realizar determinadas tareas o mostrar información.</asp:Label>" +
                 "</div>" +
+                "<div class=\"derecha\">" +
+                " <div class=\"like\">" +
+                "   <p style=\"margin - bottom:5px; \">Likes</p>" +
+                "    <p>7</p>"+
+                " </div>"+
+                " <div class=\"coment\">" +
+                "   <p style=\"margin - bottom:5px; \">Comentarios</p>" +
+                "   <p>7</p>"+
+                " </div>"+
+                " </div>" +
                 "</div>"
-                });
+                });*/
             
-            }
+            
             
             
         }
