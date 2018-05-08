@@ -21,13 +21,30 @@ namespace Proyecto
             // Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Mario\Documents\Aplicaciones_NET\U4\conn_bd\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30
             SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Mario\\Documents\\Aplicaciones_NET\\U4\\conn_bd\\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30");
             conn.Open();
-            SqlCommand command = new SqlCommand("SELECT * FROM Noticias;", conn);
+            SqlCommand command = new SqlCommand("SELECT *, (SELECT COUNT(*) FROM Likes WHERE id_noticia = id) As Likes  FROM Noticias;", conn);
+            //SqlCommand command = new SqlCommand("SELECT id, Titulo, Cuerpo, (SELECT COUNT(*) FROM Likes WHERE id_noticia = id) As Likes  FROM Noticias;", conn);
+            Int16 Likes = 0;
+            Int16 Coments = 0;
+            Int16 contador = 1;
+
+           /* //OBTENGO EL NUMERO DE LIKES
+            SqlCommand command2 = new SqlCommand("SELECT COUNT(*) FROM Likes WHERE id_noticia=" + reader["id"], conn2);
+            using (SqlDataReader reader2 = command2.ExecuteReader())
+            {
+                if (reader2.Read())
+                {
+                    Likes = Convert.ToInt16(reader2["COUNT"]);
+                }
+            }*/
+
             using (SqlDataReader reader = command.ExecuteReader())
             {
                 while (reader.Read())
                 {
-                    //INSERTA EL CODIGO HTML CON LA INFO DE LAS NOTICIAS
-                    contenedor.Controls.Add(new Label()
+                    
+                       
+                        //INSERTA EL CODIGO HTML CON LA INFO DE LAS NOTICIAS
+                        contenedor.Controls.Add(new Label()
                     {
                         Text = "<div class=\"lista_post\">" +
                "<div class=\"izquierda\">" +
@@ -36,9 +53,9 @@ namespace Proyecto
                "</asp:Label>" +
                "</div>" +
                "<div class=\"derecha\">" +
-               " <div class=\"like\">" +
+               " <div class=\"like\" >" +
                "   <p style=\"margin - bottom:5px; \">Likes</p>" +
-               "    <p>7</p>" +
+               "    <p>"+reader["Likes"]+"</p>" +
                " </div>" +
                " <div class=\"coment\">" +
                "   <p style=\"margin - bottom:5px; \">Comentarios</p>" +
@@ -48,35 +65,41 @@ namespace Proyecto
                "</div>"
                     });
 
+                    contador++;
 
                 }
             }
+            conn.Close();
+
+           
+           
+
             //INSERTAR EL CODIGO HTML DE LAS NOTICIAS
-           /* contenedor.Controls.Add(new Label()
-                {
-                    Text = "<div class=\"lista_post\">" +
-                "<div class=\"izquierda\">" +
-                "<a class=\"links_post\" id=\"lnkbPoo2\" runat=\"server\" href=\"ver-noticia.aspx\">Programacion Orientada a Objetos</a> <br /> <br /> " +
-                " <asp:Label ID=\"lblPost1\" runat=\"server\">Desarrollo web es un término que define la creación de sitios web para Internet o una intranet. " +
-                "Para conseguirlo se hace uso de tecnologías de software del lado del servidor y del cliente que involucran una combinación de procesos " +
-                "de base de datos con el uso de un navegador web a fin de realizar determinadas tareas o mostrar información.</asp:Label>" +
-                "</div>" +
-                "<div class=\"derecha\">" +
-                " <div class=\"like\">" +
-                "   <p style=\"margin - bottom:5px; \">Likes</p>" +
-                "    <p>7</p>"+
-                " </div>"+
-                " <div class=\"coment\">" +
-                "   <p style=\"margin - bottom:5px; \">Comentarios</p>" +
-                "   <p>7</p>"+
-                " </div>"+
-                " </div>" +
-                "</div>"
-                });*/
-            
-            
-            
-            
+            /* contenedor.Controls.Add(new Label()
+                 {
+                     Text = "<div class=\"lista_post\">" +
+                 "<div class=\"izquierda\">" +
+                 "<a class=\"links_post\" id=\"lnkbPoo2\" runat=\"server\" href=\"ver-noticia.aspx\">Programacion Orientada a Objetos</a> <br /> <br /> " +
+                 " <asp:Label ID=\"lblPost1\" runat=\"server\">Desarrollo web es un término que define la creación de sitios web para Internet o una intranet. " +
+                 "Para conseguirlo se hace uso de tecnologías de software del lado del servidor y del cliente que involucran una combinación de procesos " +
+                 "de base de datos con el uso de un navegador web a fin de realizar determinadas tareas o mostrar información.</asp:Label>" +
+                 "</div>" +
+                 "<div class=\"derecha\">" +
+                 " <div class=\"like\">" +
+                 "   <p style=\"margin - bottom:5px; \">Likes</p>" +
+                 "    <p>7</p>"+
+                 " </div>"+
+                 " <div class=\"coment\">" +
+                 "   <p style=\"margin - bottom:5px; \">Comentarios</p>" +
+                 "   <p>7</p>"+
+                 " </div>"+
+                 " </div>" +
+                 "</div>"
+                 });*/
+
+
+
+
         }
 
         protected void lnkbProgramacionWeb_Click(object sender, EventArgs e)
