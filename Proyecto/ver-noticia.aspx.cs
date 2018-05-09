@@ -35,7 +35,7 @@ namespace Proyecto
             String id = Convert.ToString(Request.QueryString["id"]);
             this.ViewState["VEID"] = id; 
             String idUsuario = "";
-            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = D:\\Roger\\Documentos\\VisualStudio\\proyectoASP\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Mario\\Documents\\Aplicaciones_NET\\U4\\conn_bd\\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30");
             conn.Open();
             //OPTENGO LA INFORMACION DE LA NOTICIA
             SqlCommand command = new SqlCommand("SELECT * FROM Noticias WHERE id="+id+";", conn);
@@ -61,7 +61,7 @@ namespace Proyecto
                 if (reader.Read())
                 {
 
-                   // lblUsuario.Text = reader["NombreUsuario"].ToString();
+                    lblUsuario.Text = "<a runat=\"server\" href=\"Perfil.aspx?user="+reader["NombreUsuario"].ToString()+"\">"+ reader["NombreUsuario"].ToString()+"</a>";
                 }
             }
             conn.Close();
