@@ -128,7 +128,7 @@
 
                     <div>
                        
-                        <asp:TextBox ID="TxCorreo" CssClass="txtLog"  placeholder="Correo" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TxCorreo" CssClass="txtLog"  placeholder="Correo" runat="server" OnTextChanged="TxCorreo_TextChanged"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RFrequireCorreo" runat="server" ControlToValidate="TxCorreo" Display="None" ErrorMessage="No ingresó su correo" SetFocusOnError="True"></asp:RequiredFieldValidator>
                      <asp:CustomValidator ID="CVtamanioCorreo" runat="server" ControlToValidate="TxCorreo" Display="None" ErrorMessage="El correo debe contener menos de 150 caracteres" ClientValidationFunction="validaNombreTamanio"></asp:CustomValidator>
                      <asp:RegularExpressionValidator ID="REexpresionCorreo" runat="server" ControlToValidate="TxCorreo" Display="None" ErrorMessage="El correo no cumple con formato válido" SetFocusOnError="True" ValidationExpression="^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"></asp:RegularExpressionValidator>
