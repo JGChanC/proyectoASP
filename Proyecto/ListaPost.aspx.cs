@@ -21,6 +21,7 @@ namespace Proyecto
             // Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Mario\Documents\Aplicaciones_NET\U4\conn_bd\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30
             SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Mario\\Documents\\Aplicaciones_NET\\U4\\conn_bd\\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30");
             conn.Open();
+            //BUSCO TODAS LAS NOTICIAS CON SU RESPECTIVA CANTIDAD DE LIKES Y COMENTARIOS
             SqlCommand command = new SqlCommand("SELECT *, (SELECT COUNT(*) FROM Likes WHERE id_noticia = id) As Likes, (SELECT COUNT(*) FROM Comentarios WHERE id_noticia = id) As Comentario  FROM Noticias;", conn);
            
 
