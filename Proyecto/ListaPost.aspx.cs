@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Proyecto
 {
@@ -15,7 +17,77 @@ namespace Proyecto
             {
                 this.Response.Redirect("Login.aspx");
             }
-            
+
+            // Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Mario\Documents\Aplicaciones_NET\U4\conn_bd\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30
+            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Mario\\Documents\\Aplicaciones_NET\\U4\\conn_bd\\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30");
+            conn.Open();
+            //BUSCO TODAS LAS NOTICIAS CON SU RESPECTIVA CANTIDAD DE LIKES Y COMENTARIOS
+            SqlCommand command = new SqlCommand("SELECT *, (SELECT COUNT(*) FROM Likes WHERE id_noticia = id) As Likes, (SELECT COUNT(*) FROM Comentarios WHERE id_noticia = id) As Comentario  FROM Noticias;", conn);
+           
+
+
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    
+                       
+                        //INSERTA EL CODIGO HTML CON LA INFO DE LAS NOTICIAS
+                        contenedor.Controls.Add(new Label()
+                    {
+                        Text = "<div class=\"lista_post\">" +
+               "<div class=\"izquierda\">" +
+               "<a class=\"links_post\" id=\"lnkbPoo2\" runat=\"server\" href=\"ver-noticia.aspx?id=" + reader["id"] + "\">" + reader["Titulo"] + "</a> <br /> <br /> " +
+               " <asp:Label ID=\"lblPost1\" runat=\"server\">" + reader["Cuerpo"]+
+               "</asp:Label>" +
+               "</div>" +
+               "<div class=\"derecha\">" +
+               " <div class=\"like\" >" +
+               "   <p style=\"margin - bottom:5px; \">Likes</p>" +
+               "    <p>"+reader["Likes"]+"</p>" +
+               " </div>" +
+               " <div class=\"coment\">" +
+               "   <p style=\"margin - bottom:5px; \">Comentarios</p>" +
+               "   <p>"+reader["Comentario"]+"</p>" +
+               " </div>" +
+               " </div>" +
+               "</div>"
+                    });
+
+
+                }
+            }
+            conn.Close();
+
+           
+           
+
+            //INSERTAR EL CODIGO HTML DE LAS NOTICIAS
+            /* contenedor.Controls.Add(new Label()
+                 {
+                     Text = "<div class=\"lista_post\">" +
+                 "<div class=\"izquierda\">" +
+                 "<a class=\"links_post\" id=\"lnkbPoo2\" runat=\"server\" href=\"ver-noticia.aspx\">Programacion Orientada a Objetos</a> <br /> <br /> " +
+                 " <asp:Label ID=\"lblPost1\" runat=\"server\">Desarrollo web es un término que define la creación de sitios web para Internet o una intranet. " +
+                 "Para conseguirlo se hace uso de tecnologías de software del lado del servidor y del cliente que involucran una combinación de procesos " +
+                 "de base de datos con el uso de un navegador web a fin de realizar determinadas tareas o mostrar información.</asp:Label>" +
+                 "</div>" +
+                 "<div class=\"derecha\">" +
+                 " <div class=\"like\">" +
+                 "   <p style=\"margin - bottom:5px; \">Likes</p>" +
+                 "    <p>7</p>"+
+                 " </div>"+
+                 " <div class=\"coment\">" +
+                 "   <p style=\"margin - bottom:5px; \">Comentarios</p>" +
+                 "   <p>7</p>"+
+                 " </div>"+
+                 " </div>" +
+                 "</div>"
+                 });*/
+
+
+
+
         }
 
         protected void lnkbProgramacionWeb_Click(object sender, EventArgs e)
@@ -36,32 +108,6 @@ namespace Proyecto
         }
 
 
-        protected void lnkbJQ_Click(object sender, EventArgs e)
-        {
-            this.Session["VSTexto"] = lblPost4.Text;
-            this.Session["VSTitulo"] = lnkbJQ.Text;
-            this.Response.Redirect("ver-noticia.aspx");
-        }
-
-        protected void lnkbJS_Click(object sender, EventArgs e)
-        {
-            this.Session["VSTexto"] = lblPost3.Text;
-            this.Session["VSTitulo"] = lnkbJS.Text;
-            this.Response.Redirect("ver-noticia.aspx");
-        }
-
-        protected void lnkbPoo_Click1(object sender, EventArgs e)
-        {
-            this.Session["VSTexto"] = lblPost2.Text;
-            this.Session["VSTitulo"] = lnkbPoo.Text;
-            this.Response.Redirect("ver-noticia.aspx");
-        }
-
-        protected void lnkbASP_Click(object sender, EventArgs e)
-        {
-            this.Session["VSTexto"] = lblPost5.Text;
-            this.Session["VSTitulo"] = lnkbASP.Text;
-            this.Response.Redirect("ver-noticia.aspx");
-        }
+       
     }
 }

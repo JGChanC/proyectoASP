@@ -103,16 +103,15 @@
                 <br /> <br />
 	        	<h3>ACTIVIDAD RECIENTE</h3>
                 <br /> <br />
-                <a href="ver-noticia.aspx">"Como usar Visual Basic"</a> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label5" runat="server" Text="hace 1 dia"></asp:Label>
+                <asp:Label ID="lblActividad_Reciente" runat="server" Text=""></asp:Label>
 	        </div>
         </div>
 
-        <div class="segunda_caja">
+        <div class="segunda_caja" id="segunda_caja" runat="server">
         	<h2>Otras publicaciones</h2>
         </div>
         <br /> <br />
-        <div class="mensaje">
+        <div class="mensaje" id="cont_mensaje" runat="server">
             <asp:Label ID="Label1" runat="server" Text="Enviar un mensaje..." ForeColor="Blue"></asp:Label>
             <br /> <br /> 
             <textarea id="txtmensaje" class="cajita" runat="server" width="448px" height="83px" border="1px"></textarea>
@@ -120,8 +119,10 @@
             <asp:CustomValidator ID="CVtamanioComentario" runat="server" ClientValidationFunction="tamanioComentario" ControlToValidate="txtmensaje" Display="None" ErrorMessage="El comentario no debe excederse de 140 caracteres"></asp:CustomValidator>
             <asp:RegularExpressionValidator ID="REexpresionComentario" runat="server" ControlToValidate="txtmensaje" Display="None" ErrorMessage="El comentario no puede contener caracteres especiales" ValidationExpression="([0-9A-ZÁÉÍÓÚa-zñáéíóú]+[\s]*)+"></asp:RegularExpressionValidator>
             <br /> <br /> 
-            <asp:Button CssClass="botonEnviar" ID="btnEnviar" runat="server" Text="Enviar" BorderStyle="Ridge" />
+            <asp:Button CssClass="botonEnviar" ID="btnEnviar" runat="server" Text="Enviar" BorderStyle="Ridge" OnClick="btnEnviar_Click" />
             <asp:ValidationSummary ID="VRresumenComenta" runat="server" DisplayMode="List" ShowMessageBox="True" ShowSummary="False" />
+            <br /><br />
+            <asp:Label ID="Label4" runat="server" Text="Comentarios:"></asp:Label>
         </div>
     </div>
          <asp:LinkButton ID="lnkbCerrarSesion" runat="server" OnClick="lnkbCerrarSesion_Click" CausesValidation="False"></asp:LinkButton>

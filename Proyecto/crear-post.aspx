@@ -72,7 +72,7 @@
 
             </div>
             <div>
-                <asp:CheckBox  CssClass="theme-check" Text=" Hacer visible la noticia" runat="server" />
+                <asp:CheckBox ID="cbvisible" CssClass="theme-check" Text=" Hacer visible la noticia" runat="server" />
             </div>
             <asp:Button ID="btnEnviar" Text="Guardar" runat="server" OnClick="btnEnviar_Click" />
                 <asp:ValidationSummary ID="VResumenCrearNoticia" runat="server" DisplayMode="List" ShowMessageBox="True" ShowSummary="False" />

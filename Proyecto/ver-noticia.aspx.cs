@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Proyecto
 {
@@ -17,12 +19,69 @@ namespace Proyecto
             {
                 this.Response.Redirect("Login.aspx");
             }
-            if (this.Session["VSTitulo"] != null)
+           /* if (this.Session["VSTitulo"] != null)
             {
                 lblTitulo.Text = (String) this.Session["VSTitulo"];
                 lblTexto.Text = (String)this.Session["VSTexto"];
                 
+            }*/
+
+            /*
+             * 
+             * 
+             * 
+             */
+
+            String id = Convert.ToString(Request.QueryString["id"]);
+            this.ViewState["VEID"] = id; 
+            String idUsuario = "";
+            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Mario\\Documents\\Aplicaciones_NET\\U4\\conn_bd\\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30");
+            conn.Open();
+            //OPTENGO LA INFORMACION DE LA NOTICIA
+            SqlCommand command = new SqlCommand("SELECT * FROM Noticias WHERE id="+id+";", conn);
+
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    //LA PONGO EN LO LABELS
+                    lblTitulo.Text = reader["Titulo"].ToString();
+                    lblTexto.Text = reader["Cuerpo"].ToString();
+                    //OPTENGO LA ID DEL CREADOR DE LA NOTICIA
+                    idUsuario = reader["id_usuario"].ToString();
+                }
             }
+            conn.Close();
+
+            conn.Open();
+            //BUSCO SU NOMBRE DE USUARIO POR MEDIO DE SU ID
+            SqlCommand command2 = new SqlCommand("SELECT * FROM Usuarios WHERE id=" + idUsuario + ";", conn);
+            using (SqlDataReader reader = command2.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+
+                    lblUsuario.Text = "<a runat=\"server\" href=\"Perfil.aspx?user="+reader["NombreUsuario"].ToString()+"\">"+ reader["NombreUsuario"].ToString()+"</a>";
+                }
+            }
+            conn.Close();
+
+            conn.Open();
+            //BUSCO LOS COMENTARIOS RELACIONADOS A LA NOTICIA JUNTO CON QUIEN LOS ESCRIBIO
+            SqlCommand command3 = new SqlCommand("SELECT *  , (SELECT nombreusuario FROM Usuarios WHERE id = id_usuario) As Nombre FROM Comentarios WHERE id_noticia=" + id+ ";", conn);
+            using (SqlDataReader reader = command3.ExecuteReader())
+            {
+               while (reader.Read())
+                {
+                    lblComentario.Controls.Add(new Label() {
+                        Text ="</br>"+reader["Nombre"]+": "+ reader["comentario"].ToString()+"</br>"
+                        }
+                        );
+                   
+                }
+            }
+            conn.Close();
+
         }
 
         protected void lnkbCerrarSesion_Click(object sender, EventArgs e)
@@ -35,11 +94,58 @@ namespace Proyecto
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             //Enviar Mensaje a guardar
+            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Mario\\Documents\\Aplicaciones_NET\\U4\\conn_bd\\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30");
+
+            String user =""+this.Session["VSUsuario"];
+            String id = "";
+            conn.Open();
+            SqlCommand command3 = new SqlCommand("SELECT id From Usuarios WHERE nombreusuario='"+user+"';", conn);
+            
+            using (SqlDataReader reader = command3.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    //OPTENEMOS EL ID DEL QUE SE ENCUENTRA EN SESION PARA PODER LIGAR SU COMENTARIO A LA NOTICIA
+                    id = reader["id"].ToString();
+                    lblComentario.Controls.Add(new Label()
+                    {
+                        //AGREGAMOS EL COMENTARIO A LA PAGINA
+                        Text = "</br>"+this.Session["VSUsuario"]+": "+txtmensaje.Text
+                    }
+                        );
+
+                }
+            }
+            conn.Close();
+
+            //SIN CONEXION
+            SqlDataAdapter adp = null;
+            String OrderSql;
+            DataSet ds;
+
+                conn.Open();
+                OrderSql = String.Format("SELECT * FROM Comentarios;");
+                ds = new DataSet();
+                adp = new SqlDataAdapter(OrderSql, conn);
+                adp.Fill(ds, "CopiaTabla");
+                DataRow dr;
+                dr = ds.Tables["CopiaTabla"].NewRow();
+                SqlCommand cmd = new SqlCommand(OrderSql, conn);
+
+                //AGREGAMOS EL COMENTARIO A LA BD
+                dr["id_usuario"] = Convert.ToInt16(id);
+                dr["id_noticia"] =Convert.ToInt16( this.ViewState["VEID"].ToString());
+                dr["comentario"] = (string)txtmensaje.Text;
+                ds.Tables["CopiaTabla"].Rows.Add(dr);
+
+                SqlCommandBuilder cb;
+                cb = new SqlCommandBuilder(adp);
+                adp.Update(ds.Tables["CopiaTabla"]);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+         
             txtmensaje.Text = "";
-            lblComentario.Text = (String)this.ViewState["comentario"];
-            string script = "alert(\"Comentario enviado correctamente\");";
-            ScriptManager.RegisterStartupScript(this, GetType(),
-                                  "ServerControlScript", script, true);
+
         }
 
         protected void txtmensaje_TextChanged(object sender, EventArgs e)

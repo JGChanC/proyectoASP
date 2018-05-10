@@ -85,6 +85,15 @@ namespace Proyecto {
         protected global::System.Web.UI.WebControls.CustomValidator CVTamanioContenido;
         
         /// <summary>
+        /// cbvisible control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbvisible;
+        
+        /// <summary>
         /// btnEnviar control.
         /// </summary>
         /// <remarks>

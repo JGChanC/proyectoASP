@@ -84,7 +84,7 @@
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Por"></asp:Label>    
             &nbsp;&nbsp;
-                <asp:Label ID="Label3" runat="server" Text="Roger Canche" Font-Bold="True"></asp:Label>
+                <asp:Label ID="lblUsuario" runat="server" Text="Roger Canche" Font-Bold="True"></asp:Label>
                  &nbsp;&nbsp;
                 <asp:Label ID="Label4" runat="server" Text="-Ayer" Font-Italic="True"></asp:Label>
                   
