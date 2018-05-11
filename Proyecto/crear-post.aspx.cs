@@ -48,7 +48,7 @@ namespace Proyecto
             String ID="";
             String visible = "FALSE";
             Conn = new SqlConnection();
-            Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Roger\\Documentos\\VisualStudio\\proyectoASP\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30";
+            Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\VS2015\\U_3\\ProyectoU4\\conn_bd\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30";
 
             SqlCommand command = new SqlCommand("SELECT * FROM Usuarios WHERE nombreusuario='"+ this.Session["VSUsuario"].ToString()+ "';", Conn);
             Conn.Open();

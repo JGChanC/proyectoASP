@@ -92,6 +92,9 @@
 
             <div class="texto">
                 <asp:Label ID="lblTexto" runat="server" Text="Aprender a usar este sistemas es muy faicl. Lo primero que tenemos que hacer es..." Font-Size="18pt" Font-Strikeout="False"></asp:Label>
+                <br />
+                <br />
+                <asp:Button ID="btnMegusta" CssClass="botonEnviar" runat="server" CausesValidation="false" OnClick="btnMegusta_Click" Text="Me gusta" />
             </div>
 
               <div class="mensaje">

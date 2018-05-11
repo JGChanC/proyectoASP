@@ -35,7 +35,7 @@ namespace Proyecto
             String id = Convert.ToString(Request.QueryString["id"]);
             this.ViewState["VEID"] = id; 
             String idUsuario = "";
-            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Mario\\Documents\\Aplicaciones_NET\\U4\\conn_bd\\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30");
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\VS2015\\U_3\\ProyectoU4\\conn_bd\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
             //OPTENGO LA INFORMACION DE LA NOTICIA
             SqlCommand command = new SqlCommand("SELECT * FROM Noticias WHERE id="+id+";", conn);
@@ -94,7 +94,7 @@ namespace Proyecto
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             //Enviar Mensaje a guardar
-            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Mario\\Documents\\Aplicaciones_NET\\U4\\conn_bd\\BD_proyecto_post.mdf; Integrated Security = True; Connect Timeout = 30");
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\VS2015\\U_3\\ProyectoU4\\conn_bd\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
 
             String user =""+this.Session["VSUsuario"];
             String id = "";
@@ -153,6 +153,81 @@ namespace Proyecto
             //SETEO del msj a una variable de estado
             a = txtmensaje.Text;
             this.ViewState["comentario"] = a;
+        }
+
+        protected void btnMegusta_Click(object sender, EventArgs e)
+        {
+            //Enviar Mensaje a guardar
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\VS2015\\U_3\\ProyectoU4\\conn_bd\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
+
+            String user = "" + this.Session["VSUsuario"];
+            String id = "",idNoticia="";
+            idNoticia = this.ViewState["VEID"].ToString();
+            conn.Open();
+            SqlCommand command3 = new SqlCommand("SELECT id From Usuarios WHERE nombreusuario='" + user + "';", conn);
+
+            using (SqlDataReader reader = command3.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    //OPTENEMOS EL ID DEL QUE SE ENCUENTRA EN SESION PARA PODER LIGAR SU LIKE A LA NOTICIA
+                    id = reader["id"].ToString();
+                }
+            }
+
+            String OrderSql;
+            SqlParameter sp;
+            OrderSql=String.Format("HizoLike");
+            SqlCommand cmd = new SqlCommand(OrderSql, conn);
+            //Definir el procedimiento almacenado
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "HizoLike";
+            //Agregar los parametros de entrada
+            cmd.Parameters.Add(new SqlParameter("@idUsuario", int.Parse(id)));
+            cmd.Parameters.Add(new SqlParameter("@idNoticia", int.Parse(idNoticia)));
+
+            sp = new SqlParameter();
+            sp.ParameterName = "@Result";
+            sp.SqlDbType = SqlDbType.Int;
+            sp.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(sp);
+            cmd.ExecuteNonQuery();
+
+            if (int.Parse(sp.Value.ToString()) > 0)
+            {
+                string script = "alert(\"Ya habias dado me gusta a la noticia\");";
+                ScriptManager.RegisterStartupScript(this, GetType(),
+                                      "ServerControlScript", script, true);
+            }
+            else
+            {
+
+
+                try
+                {
+                   
+                    OrderSql = String.Format("INSERT INTO Likes(id_usuario, id_noticia) VALUES({0},{1})", id,idNoticia);
+                    cmd = new SqlCommand(OrderSql, conn);
+                    cmd.ExecuteNonQuery();
+
+                  
+
+                    string script = "alert(\"Le diste me gusta a la noticia\");";
+                    ScriptManager.RegisterStartupScript(this, GetType(),
+                                          "ServerControlScript", script, true);
+
+                }
+                catch (Exception ex1)
+                {
+                      string script = "alert(\"Error: al dar me gusta\");";
+                      ScriptManager.RegisterStartupScript(this, GetType(),
+                                            "ServerControlScript", script, true);
+                                            
+                    //txtmensaje.Text = "Error: "+ ex1;
+                }
+
+            }
+            conn.Close();
         }
     }
 }
