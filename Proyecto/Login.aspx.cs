@@ -47,7 +47,7 @@ namespace Proyecto
             SqlParameter nombreusuario = new SqlParameter();
             SqlParameter contrasenia = new SqlParameter();
 
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\VS2015\\U_3\\ProyectoU4\\conn_bd\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Roger\\Documentos\\VisualStudio\\proyectoASP\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
             SqlCommand com = new SqlCommand();
             com.Connection = con;
             con.Open();

@@ -101,30 +101,7 @@
     <div id="contenedor" runat="server">
         
         <asp:Label ID="lblTituloPost" runat="server" Text="Todos los Post"></asp:Label>
-        <div class="lista_post">
-            <div class="izquierda">
-                 <asp:LinkButton CssClass="links_post" ID="lnkbProgramacionWeb" runat="server" OnClick="lnkbProgramacionWeb_Click">Programacion Web</asp:LinkButton>
-            
-                <br />
-                <asp:Label ID="lblPost1" runat="server">Desarrollo web es un término que define la creación de sitios web para Internet o una intranet. 
-                    Para conseguirlo se hace uso de tecnologías de software del lado del servidor y del cliente que involucran una combinación de procesos 
-                    de base de datos con el uso de un navegador web a fin de realizar determinadas tareas o mostrar información.</asp:Label>
-            </div>
-            <div class="derecha">
-                <div class="like">
-                     <p style="margin-bottom:5px;">Likes</p>
-                <p>4</p>
-                </div>
-                <div class="coment">
-                     <p style="margin-bottom:5px;">Comentarios</p>
-                       <p>3</p>
-                </div>
-               
-               
-            </div>
-               
-            
-        </div>
+        
        
 
     </div>
