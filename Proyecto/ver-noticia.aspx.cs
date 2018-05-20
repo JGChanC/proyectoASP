@@ -35,7 +35,7 @@ namespace Proyecto
             String id = Convert.ToString(Request.QueryString["id"]);
             this.ViewState["VEID"] = id; 
             String idUsuario = "";
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\VS2015\\U_3\\ProyectoU4\\conn_bd\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Roger\\Documentos\\VisualStudio\\proyectoASP\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
             //OPTENGO LA INFORMACION DE LA NOTICIA
             SqlCommand command = new SqlCommand("SELECT * FROM Noticias WHERE id="+id+";", conn);
@@ -94,7 +94,7 @@ namespace Proyecto
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             //Enviar Mensaje a guardar
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\VS2015\\U_3\\ProyectoU4\\conn_bd\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Roger\\Documentos\\VisualStudio\\proyectoASP\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
 
             String user =""+this.Session["VSUsuario"];
             String id = "";
@@ -158,7 +158,7 @@ namespace Proyecto
         protected void btnMegusta_Click(object sender, EventArgs e)
         {
             //Enviar Mensaje a guardar
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\VS2015\\U_3\\ProyectoU4\\conn_bd\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Roger\\Documentos\\VisualStudio\\proyectoASP\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
 
             String user = "" + this.Session["VSUsuario"];
             String id = "",idNoticia="";

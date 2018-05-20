@@ -32,7 +32,7 @@ namespace Proyecto
 
             this.ViewState["VEUser"]=user;
 
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\VS2015\\U_3\\ProyectoU4\\conn_bd\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Roger\\Documentos\\VisualStudio\\proyectoASP\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
             SqlCommand command = new SqlCommand("SELECT * FROM Usuarios WHERE nombreusuario='" + user+ "';", conn);
             String id = "", nombre = "", apellido = "";
@@ -102,7 +102,7 @@ namespace Proyecto
             String id_actual = "";
             String OrdenSql;
 
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\VS2015\\U_3\\ProyectoU4\\conn_bd\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Roger\\Documentos\\VisualStudio\\proyectoASP\\BD_proyecto_post.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
             SqlCommand command = new SqlCommand("SELECT * FROM Usuarios WHERE nombreusuario='" + user_actual + "';", conn);
            
